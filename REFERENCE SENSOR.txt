@@ -1,0 +1,4 @@
+F:\sensorizedglove_Old\Software\TestPPSAPI_VS\TestPPS_API
+
+As of 2018-07-16, this directory contains a solution file (TestPPS_API.sln) that has C++ code that reads the reference sensor and stores the frames of data in an output csv. 
+Needs to be run in MSVS2015.
