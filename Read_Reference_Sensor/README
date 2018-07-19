@@ -1,0 +1,11 @@
+The process used to create a .exe to be used in the Matlab GUI is as follows:
+
+1) Using Abelardo's files the path to working Visual Studio test code is: *Abelardo*\Software\TestPPSAPI_VS\TestPPS_API
+	In this folder, there is a VS solution file (.sln) and an executable file (.exe) in bin\x64
+	For editing, the .sln/.cpp in the src folder can be edited and ran in order to produce an updated .exe
+	If the .exe requires msvcp140d.dll, Visual Studio 2015 (or 2017) must be installed (if msvcp120d.dll, VS 2013 is required - free setup in Software&HardwareSupport\vs2013.4_dskexp_ENU)
+
+2) Install the Chameleon_TVR program (Software&HardwareSupport\PPS glove\Chameleon 1.8.0.11 Install- OntarioTPS\Chameleon 1.8.0.11 Install)
+
+3) If you take the .exe and move it to a different operating folder, the "HWPlugins", "ProcPlugins", and "setup" folders and "PPSDaqAPI.dll" must be brought with it in order to function 
+	Ensure that the setup contains "Reference.cfg" (if not, the files can be found in F:\sensorizedglove_Old\Software\sensorizedglovegui\setup)
