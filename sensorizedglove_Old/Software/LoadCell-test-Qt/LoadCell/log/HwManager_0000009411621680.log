@@ -1,0 +1,27 @@
+Log file D:\Abelardo\sensorizedglove\Software\LoadCell-test-Qt\LoadCell\log\HwManager_0000009411621680.log created on 2016-05-31 at 05:46:29 PM
+System Logging Level = 2
+Creating Hardware Manager 0000009411621680...
+Using Plugin folder of D:\Abelardo\sensorizedglove\Software\LoadCell-test-Qt\LoadCell\debug\HwPlugins\
+Building factory using searchPath D:\Abelardo\sensorizedglove\Software\LoadCell-test-Qt\LoadCell\debug\HwPlugins\Hw*Lib.dll
+Loading HwArrayG2Lib.dll...success!
+Loading HWArrayG3Lib.dll...success!
+Loading HwD600Lib.dll...success!
+Loading HwDigiUsbLib.dll...success!
+Loading HWEmulatorLib.dll...success!
+Loading HWLoadstarLib.dll...success!
+Loading HwMensorLib.dll...success!
+Loading HwNidaqLib.dll...success!
+Loading HwOmegaTempLib.dll...success!
+Loading HwReferenceLib.dll...success!
+Loading HWTileLib.dll...success!
+Built factory for 11 plugins:
+ArrayG2 ArrayG3 D600 DigiUsb Emulator Loadstar Mensor Nidaq OmegaTemp Reference Tile 
+
+Attaching device type Reference from file D:\Abelardo\sensorizedglove\Software\LoadCell-test-Qt\LoadCell\setup\Reference_hw.txt
+364: Constructor found in factory.
+378: Device created.
+934: Starting acquisition threads...
+938: Device 0: Success. Done
+7260: Stopping acquisition thread:Device 0: is alive. Terminating... done.
+Destroying Hardware Manager 0000009411621680
+Factory is purged

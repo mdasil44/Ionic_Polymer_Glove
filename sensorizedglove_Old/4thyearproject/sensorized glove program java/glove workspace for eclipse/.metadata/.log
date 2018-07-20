@@ -1,0 +1,378 @@
+!SESSION 2015-05-28 10:35:26.281 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-05-28 10:38:41.640
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-05-28 10:38:41.640
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'H:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-05-28 10:47:43.357 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.java.product -data \\ebithp-c1v9\es6\h\sabeysen\Desktop\Sensorized Glove Program Java\Glove workspace for Eclipse -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-05-28 10:48:37.010
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-05-28 10:48:37.010
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'H:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-05-28 10:59:51.122 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product \\ebithp-c1v9\es6\h\sabeysen\Desktop\Sensorized Glove Program Java\Glove workspace for Eclipse\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.java.product \\ebithp-c1v9\es6\h\sabeysen\Desktop\Sensorized Glove Program Java\Glove workspace for Eclipse\.project
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-05-28 11:00:10.445
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-05-28 11:00:10.461
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'H:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-05-28 11:21:23.559 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product \\ebithp-c1v9\es6\h\sabeysen\Desktop\Sensorized Glove Program Java\Glove workspace for Eclipse\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.java.product \\ebithp-c1v9\es6\h\sabeysen\Desktop\Sensorized Glove Program Java\Glove workspace for Eclipse\.project
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-05-28 11:21:58.459
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-05-28 11:21:58.474
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'H:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-06-03 11:35:43.152 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.ant.ui 4 0 2015-06-03 11:35:50.590
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.ant.ui [58]
+  Unresolved requirement: Require-Bundle: org.eclipse.jdt.junit; bundle-version="[3.5.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jdt.junit; bundle-version="3.7.300.v20140418-0836"; singleton:="true"
+       org.eclipse.jdt.junit [203]
+         Unresolved requirement: Require-Bundle: org.eclipse.jdt.junit.runtime; bundle-version="[3.4.100,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.jdt.junit.runtime; bundle-version="3.4.500.v20140527-1138"; singleton:="true"
+              org.eclipse.jdt.junit.runtime [205]
+                Unresolved requirement: Require-Bundle: org.junit; bundle-version="3.8.2"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.jdt.junit 4 0 2015-06-03 11:35:50.621
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jdt.junit [203]
+  Unresolved requirement: Require-Bundle: org.eclipse.jdt.junit.runtime; bundle-version="[3.4.100,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jdt.junit.runtime; bundle-version="3.4.500.v20140527-1138"; singleton:="true"
+       org.eclipse.jdt.junit.runtime [205]
+         Unresolved requirement: Require-Bundle: org.junit; bundle-version="3.8.2"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.jdt.junit.core 4 0 2015-06-03 11:35:50.637
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jdt.junit.core [204]
+  Unresolved requirement: Require-Bundle: org.eclipse.jdt.junit.runtime; bundle-version="[3.4.100,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jdt.junit.runtime; bundle-version="3.4.500.v20140527-1138"; singleton:="true"
+       org.eclipse.jdt.junit.runtime [205]
+         Unresolved requirement: Require-Bundle: org.junit; bundle-version="3.8.2"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.ide.ant 4 0 2015-06-03 11:35:50.637
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.ide.ant [276]
+  Unresolved requirement: Require-Bundle: org.eclipse.ant.ui
+    -> Bundle-SymbolicName: org.eclipse.ant.ui; bundle-version="3.5.500.v20140521-1557"; singleton:="true"
+       org.eclipse.ant.ui [58]
+         Unresolved requirement: Require-Bundle: org.eclipse.jdt.junit; bundle-version="[3.5.0,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.jdt.junit; bundle-version="3.7.300.v20140418-0836"; singleton:="true"
+              org.eclipse.jdt.junit [203]
+                Unresolved requirement: Require-Bundle: org.eclipse.jdt.junit.runtime; bundle-version="[3.4.100,4.0.0)"
+                  -> Bundle-SymbolicName: org.eclipse.jdt.junit.runtime; bundle-version="3.4.500.v20140527-1138"; singleton:="true"
+                     org.eclipse.jdt.junit.runtime [205]
+                       Unresolved requirement: Require-Bundle: org.junit; bundle-version="3.8.2"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.java.tasks 4 0 2015-06-03 11:35:50.653
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.java.tasks [278]
+  Unresolved requirement: Require-Bundle: org.eclipse.jdt.junit
+    -> Bundle-SymbolicName: org.eclipse.jdt.junit; bundle-version="3.7.300.v20140418-0836"; singleton:="true"
+       org.eclipse.jdt.junit [203]
+         Unresolved requirement: Require-Bundle: org.eclipse.jdt.junit.runtime; bundle-version="[3.4.100,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.jdt.junit.runtime; bundle-version="3.4.500.v20140527-1138"; singleton:="true"
+              org.eclipse.jdt.junit.runtime [205]
+                Unresolved requirement: Require-Bundle: org.junit; bundle-version="3.8.2"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.java.ui 4 0 2015-06-03 11:35:50.653
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.java.ui [279]
+  Unresolved requirement: Require-Bundle: org.eclipse.jdt.junit
+    -> Bundle-SymbolicName: org.eclipse.jdt.junit; bundle-version="3.7.300.v20140418-0836"; singleton:="true"
+       org.eclipse.jdt.junit [203]
+         Unresolved requirement: Require-Bundle: org.eclipse.jdt.junit.runtime; bundle-version="[3.4.100,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.jdt.junit.runtime; bundle-version="3.4.500.v20140527-1138"; singleton:="true"
+              org.eclipse.jdt.junit.runtime [205]
+                Unresolved requirement: Require-Bundle: org.junit; bundle-version="3.8.2"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-06-03 11:36:55.876
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-06-03 11:36:55.887
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'H:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-06-03 11:44:49.532 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product \\ebithp-c1v9\es6\h\sabeysen\Desktop\Glove\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.java.product \\ebithp-c1v9\es6\h\sabeysen\Desktop\Glove\.project
+
+!ENTRY org.eclipse.ant.ui 4 0 2015-06-03 11:44:52.208
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.ant.ui [58]
+  Unresolved requirement: Require-Bundle: org.eclipse.jdt.junit; bundle-version="[3.5.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jdt.junit; bundle-version="3.7.300.v20140418-0836"; singleton:="true"
+       org.eclipse.jdt.junit [203]
+         Unresolved requirement: Require-Bundle: org.eclipse.jdt.junit.runtime; bundle-version="[3.4.100,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.jdt.junit.runtime; bundle-version="3.4.500.v20140527-1138"; singleton:="true"
+              org.eclipse.jdt.junit.runtime [205]
+                Unresolved requirement: Require-Bundle: org.junit; bundle-version="3.8.2"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.jdt.junit 4 0 2015-06-03 11:44:52.239
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jdt.junit [203]
+  Unresolved requirement: Require-Bundle: org.eclipse.jdt.junit.runtime; bundle-version="[3.4.100,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jdt.junit.runtime; bundle-version="3.4.500.v20140527-1138"; singleton:="true"
+       org.eclipse.jdt.junit.runtime [205]
+         Unresolved requirement: Require-Bundle: org.junit; bundle-version="3.8.2"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.jdt.junit.core 4 0 2015-06-03 11:44:52.255
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jdt.junit.core [204]
+  Unresolved requirement: Require-Bundle: org.eclipse.jdt.junit.runtime; bundle-version="[3.4.100,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jdt.junit.runtime; bundle-version="3.4.500.v20140527-1138"; singleton:="true"
+       org.eclipse.jdt.junit.runtime [205]
+         Unresolved requirement: Require-Bundle: org.junit; bundle-version="3.8.2"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.ide.ant 4 0 2015-06-03 11:44:52.255
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.ide.ant [276]
+  Unresolved requirement: Require-Bundle: org.eclipse.ant.ui
+    -> Bundle-SymbolicName: org.eclipse.ant.ui; bundle-version="3.5.500.v20140521-1557"; singleton:="true"
+       org.eclipse.ant.ui [58]
+         Unresolved requirement: Require-Bundle: org.eclipse.jdt.junit; bundle-version="[3.5.0,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.jdt.junit; bundle-version="3.7.300.v20140418-0836"; singleton:="true"
+              org.eclipse.jdt.junit [203]
+                Unresolved requirement: Require-Bundle: org.eclipse.jdt.junit.runtime; bundle-version="[3.4.100,4.0.0)"
+                  -> Bundle-SymbolicName: org.eclipse.jdt.junit.runtime; bundle-version="3.4.500.v20140527-1138"; singleton:="true"
+                     org.eclipse.jdt.junit.runtime [205]
+                       Unresolved requirement: Require-Bundle: org.junit; bundle-version="3.8.2"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.java.tasks 4 0 2015-06-03 11:44:52.270
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.java.tasks [278]
+  Unresolved requirement: Require-Bundle: org.eclipse.jdt.junit
+    -> Bundle-SymbolicName: org.eclipse.jdt.junit; bundle-version="3.7.300.v20140418-0836"; singleton:="true"
+       org.eclipse.jdt.junit [203]
+         Unresolved requirement: Require-Bundle: org.eclipse.jdt.junit.runtime; bundle-version="[3.4.100,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.jdt.junit.runtime; bundle-version="3.4.500.v20140527-1138"; singleton:="true"
+              org.eclipse.jdt.junit.runtime [205]
+                Unresolved requirement: Require-Bundle: org.junit; bundle-version="3.8.2"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.java.ui 4 0 2015-06-03 11:44:52.270
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.java.ui [279]
+  Unresolved requirement: Require-Bundle: org.eclipse.jdt.junit
+    -> Bundle-SymbolicName: org.eclipse.jdt.junit; bundle-version="3.7.300.v20140418-0836"; singleton:="true"
+       org.eclipse.jdt.junit [203]
+         Unresolved requirement: Require-Bundle: org.eclipse.jdt.junit.runtime; bundle-version="[3.4.100,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.jdt.junit.runtime; bundle-version="3.4.500.v20140527-1138"; singleton:="true"
+              org.eclipse.jdt.junit.runtime [205]
+                Unresolved requirement: Require-Bundle: org.junit; bundle-version="3.8.2"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-06-03 12:39:10.424
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-06-03 12:39:10.533
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'H:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.

@@ -1,0 +1,28 @@
+Log file E:\Abelardo\sensorizedglove\Software\TestPPSAPI_Qt\testAPI-Qt\log\HwManager_0000000001CEB320.log created on 2016-05-12 at 09:11:37 AM
+System Logging Level = 2
+Creating Hardware Manager 0000000001CEB320...
+Using Plugin folder of E:\Abelardo\sensorizedglove\Software\TestPPSAPI_Qt\testAPI-Qt\debug\HwPlugins\
+Building factory using searchPath E:\Abelardo\sensorizedglove\Software\TestPPSAPI_Qt\testAPI-Qt\debug\HwPlugins\Hw*Lib.dll
+Loading HwArrayG2Lib.dll...success!
+Loading HWArrayG3Lib.dll...success!
+Loading HwD600Lib.dll...success!
+Loading HwDigiUsbLib.dll...success!
+Loading HWEmulatorLib.dll...success!
+Loading HWLoadstarLib.dll...success!
+Loading HwMensorLib.dll...success!
+Loading HwNidaqLib.dll...success!
+Loading HwOmegaTempLib.dll...success!
+Loading HwReferenceLib.dll...success!
+Loading HWTileLib.dll...success!
+Built factory for 11 plugins:
+ArrayG2 ArrayG3 D600 DigiUsb Emulator Loadstar Mensor Nidaq OmegaTemp Reference Tile 
+
+Attaching device type D600 from file E:\Abelardo\sensorizedglove\Software\TestPPSAPI_Qt\testAPI-Qt\setup\FingerTPS-hw.txt
+140: Constructor found in factory.
+156: Device created.
+Resizing buffer to 36000 frames, recordsize = 12
+Attaching device type Reference from file E:\Abelardo\sensorizedglove\Software\TestPPSAPI_Qt\testAPI-Qt\setup\Reference_hw.txt
+187: Constructor found in factory.
+202: Device created.
+500: Starting acquisition threads...
+500: Device 0: Success. 500: Device 1: Success. Done

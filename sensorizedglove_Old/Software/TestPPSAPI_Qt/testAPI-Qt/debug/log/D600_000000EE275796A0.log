@@ -1,0 +1,18 @@
+Log file F:\sensorizedglove_Old\Software\TestPPSAPI_Qt\testAPI-Qt\debug\log\D600_000000EE275796A0.log created on 2018-07-13 at 12:58:32 PM
+System Logging Level = 2
+897: RecordSize = 12 (2 I2C dev, 0 SPI dev)
+942: Mapped RecordSize = 12
+Trying to connect to Bluetooth Serial Device
+Currently in state 1, so releasing existing hardware...done.
+3673: Searching 1 ports
+Trying to open COM1 at 921600 baud
+Trying to open COM1 at 9600 baud
+4088: Searching 1 ports
+Trying to open COM1 at 921600 baud
+Trying to open COM1 at 9600 baud
+4518: Searching 1 ports
+Trying to open COM1 at 921600 baud
+Trying to open COM1 at 9600 baud
+No valid COM port found for Bluetooth adapter
+ERROR: No PPS Bluetooth dongle was found connected to USB. Please check that it is plugged in.
+5600: Deleting D600 Object

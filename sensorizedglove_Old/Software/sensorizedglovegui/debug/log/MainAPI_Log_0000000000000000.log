@@ -1,0 +1,11 @@
+Log file D:\Abelardo\sensorizedglove\Software\sensorizedglovegui\debug\log\MainAPI_Log_0000000000000000.log created on 2017-02-23 at 10:49:53 AM
+System Logging Level = 2
+Root Folder: D:\Abelardo\sensorizedglove\Software\sensorizedglovegui\debug\
+HwPlugins Folder: D:\Abelardo\sensorizedglove\Software\sensorizedglovegui\debug\HwPlugins\
+ProcPlugins Folder: D:\Abelardo\sensorizedglove\Software\sensorizedglovegui\debug\ProcPlugins\
+Given Local Root Folder: 
+Local Root Folder: D:\Abelardo\sensorizedglove\Software\sensorizedglovegui\debug
+Setup Folder: D:\Abelardo\sensorizedglove\Software\sensorizedglovegui\debug\setup\
+Log Folder: D:\Abelardo\sensorizedglove\Software\sensorizedglovegui\debug\log\
+Given Version: 1.0.0.0
+Error getting Capture Document: Could not open the configuration file D:\Abelardo\sensorizedglove\Software\sensorizedglovegui\debug\setup\Reference.cfg

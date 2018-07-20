@@ -1,0 +1,6 @@
+Log file D:\Abelardo\sensorizedglove\Software\sensorizedglovegui\log\Reference_000001FA12967D50.log created on 2017-07-26 at 09:19:40 AM
+System Logging Level = 2
+Trying to load from D:\Abelardo\sensorizedglove\Software\sensorizedglovegui\setup\Reference_hw.txt
+3523: Mapped RecordSize = 1
+ERROR: No PPS reference sensor was found connected to USB.
+Destroying Reference Interface

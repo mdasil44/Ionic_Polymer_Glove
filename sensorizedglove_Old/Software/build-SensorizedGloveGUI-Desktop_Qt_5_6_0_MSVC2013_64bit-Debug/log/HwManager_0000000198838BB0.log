@@ -1,0 +1,10 @@
+Log file F:\sensorizedglove_Old\Software\build-SensorizedGloveGUI-Desktop_Qt_5_6_0_MSVC2013_64bit-Debug\log\HwManager_0000000198838BB0.log created on 2018-07-16 at 04:04:52 PM
+System Logging Level = 2
+Creating Hardware Manager 0000000198838BB0...
+Using Plugin folder of F:\sensorizedglove_Old\Software\build-SensorizedGloveGUI-Desktop_Qt_5_6_0_MSVC2013_64bit-Debug\debug\HwPlugins\
+Building factory using searchPath F:\sensorizedglove_Old\Software\build-SensorizedGloveGUI-Desktop_Qt_5_6_0_MSVC2013_64bit-Debug\debug\HwPlugins\Hw*Lib.dll
+Built factory for 0 plugins:
+
+
+Destroying Hardware Manager 0000000198838BB0
+Factory is purged

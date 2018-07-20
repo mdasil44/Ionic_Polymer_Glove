@@ -1,0 +1,6 @@
+Log file D:\sensorizedglove_Old\Software\TestPPSAPI_VS\TestPPS_API\bin\x64\log\Reference_000001E9E4DE1200.log created on 2018-07-18 at 02:33:03 PM
+System Logging Level = 2
+Trying to load from D:\sensorizedglove_Old\Software\TestPPSAPI_VS\TestPPS_API\bin\x64\setup\Reference_hw.txt
+2744: Mapped RecordSize = 1
+ERROR: No PPS reference sensor was found connected to USB.
+Destroying Reference Interface

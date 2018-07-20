@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/images">        
+       <file>RightHand.png</file>    
+	  <file>RightHand1.png</file>  
+	  <file>ForceScale.png</file>
+       <file>WearMeLogoSmall.jpg</file>        
+	 <file>WearMe.ico</file>        
+    </qresource>
+</RCC>
