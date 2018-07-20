@@ -1,0 +1,16 @@
+Calibration procedure:
+Have GUI open window to select sensor to calibrate
+
+Prompt user to start pressing down on the reference sensor slowly (3-4 sec)
+	Program runs in the background, giving prompt when ready to read data
+	Mark beginning time for ionic polymer sensor to be able to go back and analyze data
+Prompt user to release sensor quickly (1-2 sec)
+	Program finishes after 6 sec and puts respective force data into csv to be read
+	Mark end time for use in analyzing
+Use the section of ionic polymer sensor data to compare its average slope of the glove sensor to that of the reference sensor
+
+Refer to sensorizedglove.cpp from D:\Ionic_Polymer_Glove\sensorizedglove_Old\Software\sensorizedglovegui\src for r^2 values
+and how to get the slope and intersection values to calibrate the sensors (relies on live polling)
+
+Live data polling:
+If force data does not contain a value higher than the specified max force, then prompt redo

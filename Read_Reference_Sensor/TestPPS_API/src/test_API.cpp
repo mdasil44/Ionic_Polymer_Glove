@@ -26,7 +26,7 @@ int const   LogLevel = 2;                 // 0 to disable
 string_t OutputFile = L"pps_output.csv";
 int const BufferSize = 500;               // max frames we can read
 int const ReadDuration = 10000;             // in milliseconds
-int const ReadInterval = 500;               // in milliseconds
+int const ReadInterval = 100;               // in milliseconds
 int const StartupTimeout = 60000;             // max to wait for daq to start (ms)
 
 // Some constants to make saving easier
@@ -56,13 +56,8 @@ bool saveToFile(wofstream& out, data_t const& data, times_t const& times,
 // Main entry point for the demo application.
 int main(int argc, wchar_t* argv[])
 {
-	// Print our current directory
-	wchar_t pathBuf[_MAX_PATH];
-	::GetCurrentDirectory(_MAX_PATH, pathBuf);
-	wcout << "Working directory is " << pathBuf << endl << endl;
-
 #ifdef PPS_DYNAMIC_LINK
-	CheckApiCall("Connecting to API Library", ppsConnectToApi(LibraryPath));
+	CheckApiCall(ppsConnectToApi(LibraryPath));
 #endif
 
 	// Read config file as argument if specified
