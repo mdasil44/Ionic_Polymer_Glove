@@ -1,0 +1,38 @@
+Log file F:\sensorizedglove_Old\Software\TestPPSAPI_VS\TestPPS_API\bin\x86\log\DeviceSerial_02E27F20.log created on 2018-07-10 at 02:39:09 PM
+System Logging Level = 2
+Trying to open COM5 at 921600 (3, 0, 0, 8)
+Successfully opened port 5
+Writing 6:2b 2b 2b 41 54 0d (+++AT ) FAIL! Wrote 0
+Trying to open COM5 at 9600 (3, 0, 0, 8)
+Successfully opened port 5
+Writing 6:2b 2b 2b 41 54 0d (+++AT ) FAIL! Wrote 0
+Trying to open COM1 at 921600 (3, 0, 0, 8)
+Error: open:SetCommState - Code = 87: The parameter is incorrect.
+
+Trying to open COM1 at 9600 (3, 0, 0, 8)
+Error: open:CreateFile - Code = 5: Access is denied.
+
+Trying to open COM5 at 921600 (3, 0, 0, 8)
+Successfully opened port 5
+Writing 6:2b 2b 2b 41 54 0d (+++AT ) FAIL! Wrote 0
+Trying to open COM5 at 9600 (3, 0, 0, 8)
+Successfully opened port 5
+Writing 6:2b 2b 2b 41 54 0d (+++AT ) FAIL! Wrote 0
+Trying to open COM1 at 921600 (3, 0, 0, 8)
+Error: open:CreateFile - Code = 5: Access is denied.
+
+Trying to open COM1 at 9600 (3, 0, 0, 8)
+Error: open:CreateFile - Code = 5: Access is denied.
+
+Trying to open COM5 at 921600 (3, 0, 0, 8)
+Successfully opened port 5
+Writing 6:2b 2b 2b 41 54 0d (+++AT ) FAIL! Wrote 0
+Trying to open COM5 at 9600 (3, 0, 0, 8)
+Successfully opened port 5
+Writing 6:2b 2b 2b 41 54 0d (+++AT ) FAIL! Wrote 0
+Trying to open COM1 at 921600 (3, 0, 0, 8)
+Error: open:CreateFile - Code = 5: Access is denied.
+
+Trying to open COM1 at 9600 (3, 0, 0, 8)
+Error: open:CreateFile - Code = 5: Access is denied.
+

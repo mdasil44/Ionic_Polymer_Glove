@@ -1,0 +1,36 @@
+Log file F:\sensorizedglove_Old\Software\TestPPSAPI_VS\TestPPS_API\bin\x86\log\Document_02EE9B78.log created on 2018-07-10 at 02:39:06 PM
+System Logging Level = 2
+Creating default base document 02EE9B78
+Creating new document 02EE9B78 from F:\sensorizedglove_Old\Software\TestPPSAPI_VS\TestPPS_API\bin\x86\setup\FingerTPS+AuxRefSensor.cfg
+Parameter::load returned 14
+Loading user settings from FingerTPS-set.txt...
+Starting hardware creation process for 2 devices
+CfgBufferSizes size = 2
+Creating a new LiveBuffer with 36000 frames...Using protection size of 20...success.
+Setting datalog interval of 0
+Creating hardware of type D600...success.
+Loading scales for Buffer 0 from FingerTPS-cal.txt...success with F:\sensorizedglove_Old\Software\TestPPSAPI_VS\TestPPS_API\bin\x86\setup\FingerTPS-cal.txt
+Adding new buffer to buffergroup.
+Creating a new LiveBuffer with 10000 frames...Using protection size of 20...success.
+Setting datalog interval of 0
+Creating hardware of type Reference...success.
+Loading scales for Buffer 1 from Reference_cal.txt...success with F:\sensorizedglove_Old\Software\TestPPSAPI_VS\TestPPS_API\bin\x86\setup\Reference_cal.txt
+Adding new buffer to buffergroup.
+Loading extraction lists from FingerTPS-ext.txt...error.
+Loading 2D vertices from #12 1...success.
+Loading Display file from FingerTPS-display.txt...success.
+Building Virtual Array from DisplayList...done.
+Building 2D Geometry...done.
+Loading 3D vertices from ...error.
+Using 2D vertex info for default 3D display
+Creating new selection object...done.
+Setting up calibrated ViewScale...done.
+Finding maximum raw output...using 32767
+Device is calibrated.
+Setting up calibrated units...done.
+Adding filters to incoming data buffers...
+done.
+Starting data acquisition...done.
+Finished creating new Capture Document
+Destroying Capture document 02EE9B78
+Stopping all running hardware...done.

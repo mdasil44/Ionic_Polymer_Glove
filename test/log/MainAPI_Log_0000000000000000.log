@@ -1,10 +1,10 @@
-Log file F:\test\log\MainAPI_Log_0000000000000000.log created on 2018-07-18 at 03:03:14 PM
+Log file D:\Ionic_Polymer_Glove\test\log\MainAPI_Log_0000000000000000.log created on 2018-07-20 at 10:24:31 AM
 System Logging Level = 2
-Root Folder: F:\test\
-HwPlugins Folder: F:\test\HwPlugins\
-ProcPlugins Folder: F:\test\ProcPlugins\
+Root Folder: D:\Ionic_Polymer_Glove\test\
+HwPlugins Folder: D:\Ionic_Polymer_Glove\test\HwPlugins\
+ProcPlugins Folder: D:\Ionic_Polymer_Glove\test\ProcPlugins\
 Given Local Root Folder: 
-Local Root Folder: F:\test
-Setup Folder: F:\test\setup\
-Log Folder: F:\test\log\
+Local Root Folder: D:\Ionic_Polymer_Glove\test
+Setup Folder: D:\Ionic_Polymer_Glove\test\setup\
+Log Folder: D:\Ionic_Polymer_Glove\test\log\
 Given Version: 1.0.0.0
