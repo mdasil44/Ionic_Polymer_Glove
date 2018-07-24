@@ -1,0 +1,11 @@
+Log file D:\Ionic_Polymer_Glove\log\MainAPI_Log_0000000000000000.log created on 2018-07-24 at 10:19:48 AM
+System Logging Level = 2
+Root Folder: D:\Ionic_Polymer_Glove\Read_Reference_Sensor\
+HwPlugins Folder: D:\Ionic_Polymer_Glove\Read_Reference_Sensor\HwPlugins\
+ProcPlugins Folder: D:\Ionic_Polymer_Glove\Read_Reference_Sensor\ProcPlugins\
+Given Local Root Folder: 
+Local Root Folder: D:\Ionic_Polymer_Glove
+Setup Folder: D:\Ionic_Polymer_Glove\setup\
+Log Folder: D:\Ionic_Polymer_Glove\log\
+Given Version: 1.0.0.0
+Error getting Capture Document: Could not open the configuration file D:\Ionic_Polymer_Glove\setup\Reference.cfg

@@ -100,7 +100,7 @@ int main(int argc, wchar_t* argv[])
 		exitProgram(1);
 	}
 
-	wcout << "Beginning to read sensor..." << endl;
+	wcout << "Reading sensor..." << endl;
 	// Read chunks of data and output to our file
 	for (int i = 0, n = ReadDuration / ReadInterval; i < n; ++i)
 	{
