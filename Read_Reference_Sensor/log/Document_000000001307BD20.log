@@ -1,7 +1,7 @@
-Log file D:\Ionic_Polymer_Glove\Read_Reference_Sensor\log\Document_000000003690BDC0.log created on 2018-07-24 at 10:20:48 AM
+Log file D:\Ionic_Polymer_Glove\Read_Reference_Sensor\log\Document_000000001307BD20.log created on 2018-07-24 at 03:14:11 PM
 System Logging Level = 2
-Creating default base document 000000003690BDC0
-Creating new document 000000003690BDC0 from D:\Ionic_Polymer_Glove\Read_Reference_Sensor\setup\Reference.cfg
+Creating default base document 000000001307BD20
+Creating new document 000000001307BD20 from D:\Ionic_Polymer_Glove\Read_Reference_Sensor\setup\Reference.cfg
 Parameter::load returned 9
 Loading user settings from Reference-set.txt...
 Starting hardware creation process for 1 devices
@@ -27,3 +27,5 @@ Adding filters to incoming data buffers...
 done.
 Starting data acquisition...done.
 Finished creating new Capture Document
+Destroying Capture document 000000001307BD20
+Stopping all running hardware...done.

@@ -1,16 +1,18 @@
 close all;
-% if libisloaded('PPSRef')
-%    unloadlibrary('PPSRef') 
-% end
-% 
-% [notfound,warnings] = loadlibrary('PPSDaqAPI.dll','PPSDaq.h','alias','PPSRef');
+if libisloaded('PPSRef')
+   unloadlibrary('PPSRef') 
+end
+
+if ~libisloaded('PPSRef')
+    [notfound,warnings] = loadlibrary('PPSDaqAPI.dll','PPSDaq.h','alias','PPSRef');
+end
 
 % libfunctions('PPSRef');
-str = 'Reference.cfg';
-vp = libpointer('uint16Ptr',[int8(str) 0]);
+configStr = 'Reference.cfg';
+configPtr = libpointer('uint16Ptr',[int8(configStr) 0]);
 logLvl = 2;
-calllib('PPSRef','ppsInitialize',vp.Value,logLvl);
-FrameSize = calllib('PPSRef','ppsGetRecordSize');
+calllib('PPSRef','ppsInitialize',configPtr.Value,logLvl);
+FrameSize = 1;
 
 BufferSize = 250;
 ReadDuration = 5000;    %in ms
@@ -42,17 +44,18 @@ for i = 1:(ReadDuration/ReadInterval)
     pause(ReadInterval/1000)
     
     nReady = calllib('PPSRef','ppsFramesReady');
-    [nRead,time,datas] = calllib('PPSRef','ppsGetData',BufferSize,timesPtr,dataPtr); %Asking to get max data points, but will only recieve max number of frames available
+    [nRead,times,data] = calllib('PPSRef','ppsGetData',BufferSize,timesPtr,dataPtr); %Asking to get max data points, but will only recieve max number of frames available
     
-    if i ~= 1
+    if i ~= 1   %first ppsGetData fills buffer with garbage values
         for j = 1:nRead
-%             datas(j)  %Debugging the live load cell value 
-            totalTime = [totalTime time(j)];
-            totalData = [totalData datas(j)];
+%             data(j)  %Debugging the live load cell value 
+            totalTime = [totalTime times(j)];
+            totalData = [totalData data(j)];
             %Figure out how Andrew initialized the Capacitance Data arrays and
             %then added values to them constantly
         end
     end
+    plot(totalTime,totalData);
 end
 
-plot(totalData);
+calllib('PPSRef','ppsStop');
