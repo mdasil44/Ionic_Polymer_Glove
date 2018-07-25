@@ -1,0 +1,5 @@
+E:\Abelardo\sensorizedglove\Software\PPS API\bin\x86\PpsCsharpSample.exe
+E:\Abelardo\sensorizedglove\Software\PPS API\bin\x86\PpsCsharpSample.pdb
+E:\Abelardo\sensorizedglove\Software\PPS API\CSharpSample\obj\x86\Debug\CSharpSample.csprojResolveAssemblyReference.cache
+E:\Abelardo\sensorizedglove\Software\PPS API\CSharpSample\obj\x86\Debug\PpsCsharpSample.exe
+E:\Abelardo\sensorizedglove\Software\PPS API\CSharpSample\obj\x86\Debug\PpsCsharpSample.pdb

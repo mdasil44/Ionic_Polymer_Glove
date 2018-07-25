@@ -1,0 +1,17 @@
+﻿Build started 29/04/2016 11:17:51 AM.
+     1>Project "E:\Abelardo\sensorizedglove\Software\PPS API\C++Samples\PpsDynamicCpp.vcxproj" on node 4 (Rebuild target(s)).
+     1>ClCompile:
+         E:\ProgramFiles2\MSVS2013\VC\bin\CL.exe /c /I"E:\Abelardo\sensorizedglove\Software\PPS API\inc\\" /ZI /nologo /W3 /WX- /Od /Oy- /D PPS_DYNAMIC_LINK /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\PpsDynamicCpp\\" /Fd"Debug\PpsDynamicCpp\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt PPSDaqDyn.cpp PPSSampleApp.cpp
+         PPSSampleApp.cpp
+         PPSDaqDyn.cpp
+         Generating Code...
+       Link:
+         E:\ProgramFiles2\MSVS2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Abelardo\sensorizedglove\Software\PPS API\bin\x86\PpsDynamicCpp.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Abelardo\sensorizedglove\Software\PPS API\bin\x86\PpsDynamicCpp.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Abelardo\sensorizedglove\Software\PPS API\bin\x86\PpsDynamicCpp.lib" /MACHINE:X86 /SAFESEH Debug\PpsDynamicCpp\PPSDaqDyn.obj
+         Debug\PpsDynamicCpp\PPSSampleApp.obj
+     1>PPSDaqDyn.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+         PpsDynamicCpp.vcxproj -> E:\Abelardo\sensorizedglove\Software\PPS API\bin\x86\PpsDynamicCpp.exe
+     1>Done Building Project "E:\Abelardo\sensorizedglove\Software\PPS API\C++Samples\PpsDynamicCpp.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.91

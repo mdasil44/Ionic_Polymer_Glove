@@ -1,0 +1,135 @@
+; Installation INF for the PPS G3 Sensor Architecture  
+; Windows processor support for 32-bit and 64-bit platforms.
+; Based on the Cypress CyUSB generic driver.
+;
+; (c) Copyright 2010 Pressure Profile Systems
+;
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=USB
+ClassGUID={36FC9E60-C465-11CF-8056-444553540000}
+Provider=%PPS_Provider%
+CatalogFile.NTx86=x86_ppsg3usb.cat
+CatalogFile.NTamd64=x64_ppsg3usb.cat
+DriverVer=06/05/2009,3.4.1.20
+
+[SourceDisksNames]
+1=%PPS_Install%,"ppsg3usb.sys",,\x86
+
+[SourceDisksNames.x86]
+1=%PPS_Install%,"ppsg3usb.sys",,\x86
+
+[SourceDisksNames.amd64]
+1=%PPS_Install%,"ppsg3usb.sys",,\x64
+
+
+[SourceDisksFiles]
+ppsg3usb.sys = 1
+
+[SourceDisksFiles.x86]
+ppsg3usb.sys = 1
+
+[SourceDisksFiles.amd64]
+ppsg3usb.sys = 1
+
+[DestinationDirs]
+PPS.Files.Ext = 10,System32\Drivers
+
+[ControlFlags]
+ExcludeFromSelect = *
+
+[Manufacturer]
+%PPS_Provider%=Device,NTx86,NTamd64
+
+;for x86 platforms
+[Device.NTx86]
+%VID_15C5&PID_0103.DeviceDesc%=PPS, USB\VID_15C5&PID_0103
+%VID_15C5&PID_0104.DeviceDesc%=PPS, USB\VID_15C5&PID_0104
+%VID_15C5&PID_0105.DeviceDesc%=PPS, USB\VID_15C5&PID_0105
+%VID_15C5&PID_0106.DeviceDesc%=PPS, USB\VID_15C5&PID_0106
+%VID_15C5&PID_0201.DeviceDesc%=PPS, USB\VID_15C5&PID_0201
+%VID_15C5&PID_0203.DeviceDesc%=PPS, USB\VID_15C5&PID_0203
+%VID_15C5&PID_0301.DeviceDesc%=PPS, USB\VID_15C5&PID_0301
+%VID_15C5&PID_0302.DeviceDesc%=PPS, USB\VID_15C5&PID_0302
+
+
+;for x64 platforms
+[Device.NTamd64]
+%VID_15C5&PID_0103.DeviceDesc%=PPS, USB\VID_15C5&PID_0103
+%VID_15C5&PID_0104.DeviceDesc%=PPS, USB\VID_15C5&PID_0104
+%VID_15C5&PID_0105.DeviceDesc%=PPS, USB\VID_15C5&PID_0105
+%VID_15C5&PID_0106.DeviceDesc%=PPS, USB\VID_15C5&PID_0106
+%VID_15C5&PID_0201.DeviceDesc%=PPS, USB\VID_15C5&PID_0201
+%VID_15C5&PID_0203.DeviceDesc%=PPS, USB\VID_15C5&PID_0203
+%VID_15C5&PID_0301.DeviceDesc%=PPS, USB\VID_15C5&PID_0301
+%VID_15C5&PID_0302.DeviceDesc%=PPS, USB\VID_15C5&PID_0302
+
+[PPS.NTx86]
+CopyFiles=PPS.Files.Ext
+AddReg=PPS.AddReg
+
+[PPS.NTx86.HW]
+AddReg=PPS.AddReg.Guid
+
+[PPS.NTx86.Services]
+Addservice = PPS,2,PPS.AddService
+
+
+[PPS.NTamd64]
+CopyFiles=PPS.Files.Ext
+AddReg=PPS.AddReg
+
+[PPS.NTamd64.HW]
+AddReg=PPS.AddReg.Guid
+
+[PPS.NTamd64.Services]
+Addservice = PPS,2,PPS.AddService
+
+
+[PPS.AddReg]
+; Deprecating - do not use in new apps to identify a PPS driver
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,ppsg3usb.sys
+; You may optionally include a check for DriverBase in your application to check for a PPS driver
+HKR,,DriverBase,,ppsg3usb.sys
+HKR,"Parameters","MaximumTransferSize",0x10001,4096
+HKR,"Parameters","DebugLevel",0x10001,2
+HKR,,FriendlyName,,%PPS_Description%
+
+[PPS.AddService]
+DisplayName    = %PPS_Description%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %10%\System32\Drivers\ppsg3usb.sys
+AddReg         = PPS.AddReg
+LoadOrderGroup = Base
+
+[PPS.Files.Ext]
+ppsg3usb.sys
+
+[PPS.AddReg.Guid]
+HKR,,DriverGUID,,%PPS.GUID%
+
+[Strings]
+PPS_Provider    = "Pressure Profile Systems, Inc."
+PPS_Company     = "Cypress Semiconductor"
+PPS_Description = "PPS Generic USB Driver"
+PPS_DisplayName = "PPS Tactile Sensor Interface"
+;;PPS.GUID="{E3F30B8C-6519-4164-9E59-24CFA093536A}"
+;; We must use Cypress' default GUID because their C++ API is
+;; hard-coded to look for that when detecting installed devices.
+PPS.GUID="{AE18AA60-7F6A-11d4-97DD-00010229B959}"
+PPS_Install		= "PPS Install Directory"
+PPS_Unused      = "."
+
+VID_15C5&PID_0103.DeviceDesc="PPS G3 Electronics"
+VID_15C5&PID_0104.DeviceDesc="PPS Tile Sensor"
+VID_15C5&PID_0105.DeviceDesc="eSoles Pillow Control"
+VID_15C5&PID_0106.DeviceDesc="PPS DigiTacts USB Interface"
+VID_15C5&PID_0201.DeviceDesc="SSI ManoScan 360 - G3"
+VID_15C5&PID_0203.DeviceDesc="SSI HD-MVS - G3"
+VID_15C5&PID_0301.DeviceDesc="MTI SureTouch - G3"
+VID_15C5&PID_0302.DeviceDesc="MTI SureTouch USB"

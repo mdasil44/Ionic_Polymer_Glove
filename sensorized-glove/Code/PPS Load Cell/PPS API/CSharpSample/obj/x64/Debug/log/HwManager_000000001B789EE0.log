@@ -1,0 +1,34 @@
+Log file F:\sensorized-glove\Code\PPS Load Cell\PPS API\CSharpSample\obj\x64\Debug\log\HwManager_000000001B789EE0.log created on 2018-07-16 at 01:34:20 PM
+System Logging Level = 2
+Creating Hardware Manager 000000001B789EE0...
+Using Plugin folder of F:\sensorized-glove\Code\PPS Load Cell\PPS API\CSharpSample\obj\x64\Debug\HwPlugins\
+Building factory using searchPath F:\sensorized-glove\Code\PPS Load Cell\PPS API\CSharpSample\obj\x64\Debug\HwPlugins\Hw*Lib.dll
+Loading HwArrayG2Lib.dll...success!
+Loading HWArrayG3Lib.dll...success!
+Loading HwD600Lib.dll...success!
+Loading HwDigiUsbLib.dll...success!
+Loading HWEmulatorLib.dll...success!
+Loading HWLoadstarLib.dll...success!
+Loading HwMensorLib.dll...success!
+Loading HwNidaqLib.dll...success!
+Loading HwOmegaTempLib.dll...success!
+Loading HwReferenceLib.dll...success!
+Loading HWTileLib.dll...success!
+Built factory for 11 plugins:
+ArrayG2 ArrayG3 D600 DigiUsb Emulator Loadstar Mensor Nidaq OmegaTemp Reference Tile 
+
+Attaching device type D600 from file F:\sensorized-glove\Code\PPS Load Cell\PPS API\CSharpSample\obj\x64\Debug\setup\FingerTPS-hw.txt
+1330: Constructor found in factory.
+1440: Device created.
+Resizing buffer to 36000 frames, recordsize = 12
+Attaching device type Reference from file F:\sensorized-glove\Code\PPS Load Cell\PPS API\CSharpSample\obj\x64\Debug\setup\Reference_hw.txt
+1680: Constructor found in factory.
+1760: Device created.
+3940: Starting acquisition threads...
+3960: Device 0: Success. 4000: Device 1: Success. Done
+6200: Stopping acquisition thread:Device 0: was already terminated.
+Device 1: is alive. Terminating... done.
+23691: Stopping acquisition thread:Device 0: was already terminated.
+Device 1: was already terminated.
+Destroying Hardware Manager 000000001B789EE0
+Factory is purged

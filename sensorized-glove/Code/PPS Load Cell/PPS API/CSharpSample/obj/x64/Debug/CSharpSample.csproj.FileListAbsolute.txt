@@ -1,0 +1,17 @@
+E:\Abelardo\sensorizedglove\Software\API\bin\x64\PpsCsharpSample.exe
+E:\Abelardo\sensorizedglove\Software\API\bin\x64\PpsCsharpSample.pdb
+E:\Abelardo\sensorizedglove\Software\API\CSharpSample\obj\x64\Debug\CSharpSample.csprojResolveAssemblyReference.cache
+E:\Abelardo\sensorizedglove\Software\API\CSharpSample\obj\x64\Debug\PpsCsharpSample.exe
+E:\Abelardo\sensorizedglove\Software\API\CSharpSample\obj\x64\Debug\PpsCsharpSample.pdb
+E:\Abelardo\sensorizedglove\Software\PPS API\bin\x64\PpsCsharpSample.exe
+E:\Abelardo\sensorizedglove\Software\PPS API\bin\x64\PpsCsharpSample.pdb
+E:\Abelardo\sensorizedglove\Software\PPS API\CSharpSample\obj\x64\Debug\CSharpSample.csprojResolveAssemblyReference.cache
+E:\Abelardo\sensorizedglove\Software\PPS API\CSharpSample\obj\x64\Debug\PpsCsharpSample.exe
+E:\Abelardo\sensorizedglove\Software\PPS API\CSharpSample\obj\x64\Debug\PpsCsharpSample.pdb
+F:\Cruzer USB\Research\sensorized-glove\Code\PPS Load Cell\PPS API\CSharpSample\obj\x64\Debug\PpsCsharpSample.exe
+F:\Cruzer USB\Research\sensorized-glove\Code\PPS Load Cell\PPS API\CSharpSample\obj\x64\Debug\PpsCsharpSample.pdb
+F:\Cruzer USB\Research\sensorized-glove\Code\PPS Load Cell\PPS API\bin\x64\PpsCsharpSample.exe
+F:\Cruzer USB\Research\sensorized-glove\Code\PPS Load Cell\PPS API\bin\x64\PpsCsharpSample.pdb
+F:\Cruzer USB\Research\sensorized-glove\Code\PPS Load Cell\PPS API\CSharpSample\obj\x64\Debug\CSharpSample.csprojResolveAssemblyReference.cache
+F:\sensorized-glove\Code\PPS Load Cell\PPS API\CSharpSample\obj\x64\Debug\PpsCsharpSample.exe
+F:\sensorized-glove\Code\PPS Load Cell\PPS API\CSharpSample\obj\x64\Debug\PpsCsharpSample.pdb

@@ -1,0 +1,20 @@
+Log file F:\Cruzer USB\Research\sensorized-glove\Code\PPS Load Cell\PPS API\C++Samples\log\DeviceSerial_00000015C8071A10.log created on 2018-07-06 at 11:49:37 AM
+System Logging Level = 2
+Trying to open COM1 at 921600 (3, 0, 0, 8)
+Error: open:SetCommState - Code = 87: The parameter is incorrect.
+
+Trying to open COM1 at 9600 (3, 0, 0, 8)
+Error: open:CreateFile - Code = 5: Access is denied.
+
+Trying to open COM1 at 921600 (3, 0, 0, 8)
+Error: open:CreateFile - Code = 5: Access is denied.
+
+Trying to open COM1 at 9600 (3, 0, 0, 8)
+Error: open:CreateFile - Code = 5: Access is denied.
+
+Trying to open COM1 at 921600 (3, 0, 0, 8)
+Error: open:CreateFile - Code = 5: Access is denied.
+
+Trying to open COM1 at 9600 (3, 0, 0, 8)
+Error: open:CreateFile - Code = 5: Access is denied.
+

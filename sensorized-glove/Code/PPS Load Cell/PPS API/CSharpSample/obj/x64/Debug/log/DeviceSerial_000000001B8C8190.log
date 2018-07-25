@@ -1,0 +1,38 @@
+Log file F:\sensorized-glove\Code\PPS Load Cell\PPS API\CSharpSample\obj\x64\Debug\log\DeviceSerial_000000001B8C8190.log created on 2018-07-16 at 01:34:24 PM
+System Logging Level = 2
+Trying to open COM1 at 921600 (3, 0, 0, 8)
+Error: open:CreateFile - Code = 5: Access is denied.
+
+Trying to open COM1 at 9600 (3, 0, 0, 8)
+Error: open:CreateFile - Code = 5: Access is denied.
+
+Trying to open COM7 at 921600 (3, 0, 0, 8)
+Error: open:CreateFile - Code = 5: Access is denied.
+
+Trying to open COM7 at 9600 (3, 0, 0, 8)
+Error: open:CreateFile - Code = 5: Access is denied.
+
+Trying to open COM1 at 921600 (3, 0, 0, 8)
+Error: open:CreateFile - Code = 5: Access is denied.
+
+Trying to open COM1 at 9600 (3, 0, 0, 8)
+Error: open:CreateFile - Code = 5: Access is denied.
+
+Trying to open COM7 at 921600 (3, 0, 0, 8)
+Error: open:CreateFile - Code = 5: Access is denied.
+
+Trying to open COM7 at 9600 (3, 0, 0, 8)
+Error: open:CreateFile - Code = 5: Access is denied.
+
+Trying to open COM1 at 921600 (3, 0, 0, 8)
+Error: open:CreateFile - Code = 5: Access is denied.
+
+Trying to open COM1 at 9600 (3, 0, 0, 8)
+Error: open:CreateFile - Code = 5: Access is denied.
+
+Trying to open COM7 at 921600 (3, 0, 0, 8)
+Error: open:CreateFile - Code = 5: Access is denied.
+
+Trying to open COM7 at 9600 (3, 0, 0, 8)
+Error: open:CreateFile - Code = 5: Access is denied.
+

@@ -1,0 +1,11 @@
+Log file F:\sensorized-glove\Code\PPS Load Cell\PPS API\bin\x86\log\MainAPI_Log_00000000.log created on 2018-07-13 at 01:18:37 PM
+System Logging Level = 2
+Root Folder: F:\sensorized-glove\Code\PPS Load Cell\PPS API\bin\x86\
+HwPlugins Folder: F:\sensorized-glove\Code\PPS Load Cell\PPS API\bin\x86\HwPlugins\
+ProcPlugins Folder: F:\sensorized-glove\Code\PPS Load Cell\PPS API\bin\x86\ProcPlugins\
+Given Local Root Folder: 
+Local Root Folder: F:\sensorized-glove\Code\PPS Load Cell\PPS API\bin\x86
+Setup Folder: F:\sensorized-glove\Code\PPS Load Cell\PPS API\bin\x86\setup\
+Log Folder: F:\sensorized-glove\Code\PPS Load Cell\PPS API\bin\x86\log\
+Given Version: 1.0.0.0
+Error getting Capture Document: Could not open the configuration file F:\sensorized-glove\Code\PPS Load Cell\PPS API\bin\x86\setup\16x16_emulator.cfgGiven null doc pointer, so using API error

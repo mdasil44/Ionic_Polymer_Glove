@@ -1,0 +1,31 @@
+Log file F:\sensorized-glove\Code\PPS Load Cell\PPS API\bin\x64\log\Document_00000072C7C9B880.log created on 2018-07-16 at 01:35:53 PM
+System Logging Level = 2
+Creating default base document 00000072C7C9B880
+Creating new document 00000072C7C9B880 from F:\sensorized-glove\Code\PPS Load Cell\PPS API\bin\x64\setup\16x16_emulator.cfg
+Parameter::load returned 6
+Loading user settings from 16x16_emulator-set.txt...
+Starting hardware creation process for 1 devices
+CfgBufferSizes size = 1
+Creating a new LiveBuffer with 10000 frames...Using protection size of 20...success.
+Setting datalog interval of 0
+Creating hardware of type Emulator...success.
+Loading scales for Buffer 0 from 16x16_emulator-Emulator0-cal.txt...success with F:\sensorized-glove\Code\PPS Load Cell\PPS API\bin\x64\setup\16x16_emulator-Emulator0-cal.txt
+Adding new buffer to buffergroup.
+Loading extraction lists from 16x16_emulator-ext.txt...error.
+Loading 2D vertices from #16 16 0.25 0.25...success.
+Loading Display file from #16 16...success.
+Building Virtual Array from DisplayList...done.
+Building 2D Geometry...done.
+Loading 3D vertices from ...error.
+Using 2D vertex info for default 3D display
+Creating new selection object...done.
+Setting up calibrated ViewScale...done setting default scale of 0-0
+Finding maximum raw output...using 4095
+Device is not calibrated.
+Setting up calibrated units...done.
+Adding filters to incoming data buffers...
+done.
+Starting data acquisition...done.
+Finished creating new Capture Document
+Destroying Capture document 00000072C7C9B880
+Stopping all running hardware...done.

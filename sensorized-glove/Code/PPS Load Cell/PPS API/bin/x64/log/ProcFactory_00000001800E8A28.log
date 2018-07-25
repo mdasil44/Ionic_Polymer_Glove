@@ -1,0 +1,43 @@
+Log file F:\sensorized-glove\Code\PPS Load Cell\PPS API\bin\x64\log\ProcFactory_00000001800E8A28.log created on 2018-07-16 at 01:35:55 PM
+System Logging Level = 2
+Searching F:\sensorized-glove\Code\PPS Load Cell\PPS API\bin\x64\ProcPlugins\*.dll for processing plugins.
+Trying to load FilterBaselineDriftLib.dll...success.
+Loading builder...success. Builder is for FilterBaselineDrift
+Trying to load FilterButterworthLib.dll...success.
+Loading builder...success. Builder is for FilterButterworth
+Trying to load FilterExpDecayLib.dll...success.
+Loading builder...success. Builder is for FilterExpDecay
+Trying to load FilterInverseLinearLib.dll...success.
+Loading builder...success. Builder is for FilterInverseLinear
+Trying to load FilterMedianLib.dll...success.
+Loading builder...success. Builder is for FilterMedian
+Trying to load FilterRepairLib.dll...success.
+Loading builder...success. Builder is for FilterRepair
+Trying to load FilterTimeAveLib.dll...success.
+Loading builder...success. Builder is for FilterTimeAve
+Trying to load FilterTimeIntegralLib.dll...success.
+Loading builder...success. Builder is for FilterTimeIntegral
+Trying to load FilterTimeMaxLib.dll...success.
+Loading builder...success. Builder is for FilterTimeMax
+Trying to load FilterTimeStdevLib.dll...success.
+Loading builder...success. Builder is for FilterTimeStdev
+Trying to load ProcContactLib.dll...success.
+Loading builder...success. Builder is for ProcContact
+Trying to load ProcCoPLib.dll...success.
+Loading builder...success. Builder is for ProcCoP
+Trying to load ProcFrameAveLib.dll...success.
+Loading builder...success. Builder is for ProcFrameAve
+Trying to load ProcFrameMaxLib.dll...success.
+Loading builder...success. Builder is for ProcFrameMax
+Trying to load ProcFrameMinLib.dll...success.
+Loading builder...success. Builder is for ProcFrameMin
+Trying to load ProcFramePeakLocnLib.dll...success.
+Loading builder...success. Builder is for ProcFramePeakLocn
+Trying to load ProcFrameTotLib.dll...success.
+Loading builder...success. Builder is for ProcFrameTot
+Built factory for 17 dynamic plugins.
+Creating processor from ProcScale  00000072C7C9E370 0 256 0 1 2 3 4 5 6 7 8 9 10 11 
+Name = ProcScale; Config = 00000072C7C9E370 0 256 0 1 2 3 4 5 6 7 8
+Getting builder...success.
+Building processor for ProcScale...successfully built 256 nodes.
+After adding new ones, total processor list is 256
