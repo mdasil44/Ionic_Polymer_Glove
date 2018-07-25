@@ -1,0 +1,10 @@
+Log file D:\Ionic_Polymer_Glove\log\HwManager_000000002303AB60.log created on 2018-07-25 at 12:31:24 PM
+System Logging Level = 2
+Creating Hardware Manager 000000002303AB60...
+Using Plugin folder of D:\Ionic_Polymer_Glove\sensorized-glove\Code\GUI\Matlab\HwPlugins\
+Building factory using searchPath D:\Ionic_Polymer_Glove\sensorized-glove\Code\GUI\Matlab\HwPlugins\Hw*Lib.dll
+Built factory for 0 plugins:
+
+
+Destroying Hardware Manager 000000002303AB60
+Factory is purged

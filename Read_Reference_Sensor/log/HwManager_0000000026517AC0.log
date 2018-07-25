@@ -1,6 +1,6 @@
-Log file D:\Ionic_Polymer_Glove\log\HwManager_0000000012517A50.log created on 2018-07-24 at 02:36:57 PM
+Log file D:\Ionic_Polymer_Glove\Read_Reference_Sensor\log\HwManager_0000000026517AC0.log created on 2018-07-25 at 02:29:53 PM
 System Logging Level = 2
-Creating Hardware Manager 0000000012517A50...
+Creating Hardware Manager 0000000026517AC0...
 Using Plugin folder of D:\Ionic_Polymer_Glove\Read_Reference_Sensor\HwPlugins\
 Building factory using searchPath D:\Ionic_Polymer_Glove\Read_Reference_Sensor\HwPlugins\Hw*Lib.dll
 Loading HwArrayG2Lib.dll...success!
@@ -17,5 +17,11 @@ Loading HWTileLib.dll...success!
 Built factory for 11 plugins:
 ArrayG2 ArrayG3 D600 DigiUsb Emulator Loadstar Mensor Nidaq OmegaTemp Reference Tile 
 
-Destroying Hardware Manager 0000000012517A50
+Attaching device type Reference from file D:\Ionic_Polymer_Glove\Read_Reference_Sensor\setup\Reference_hw.txt
+389: Constructor found in factory.
+409: Device created.
+919: Starting acquisition threads...
+919: Device 0: Success. Done
+7266: Stopping acquisition thread:Device 0: is alive. Terminating... done.
+Destroying Hardware Manager 0000000026517AC0
 Factory is purged

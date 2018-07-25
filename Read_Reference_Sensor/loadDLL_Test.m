@@ -7,7 +7,7 @@ if ~libisloaded('PPSRef')
     [notfound,warnings] = loadlibrary('PPSDaqAPI.dll','PPSDaq.h','alias','PPSRef');
 end
 
-% libfunctions('PPSRef');
+libfunctions('PPSRef');
 configStr = 'Reference.cfg';
 configPtr = libpointer('uint16Ptr',[int8(configStr) 0]);
 logLvl = 2;

@@ -1,4 +1,4 @@
-Log file D:\Ionic_Polymer_Glove\Read_Reference_Sensor\log\ProcFactory_00000000127C8A28.log created on 2018-07-24 at 03:14:11 PM
+Log file D:\Ionic_Polymer_Glove\Read_Reference_Sensor\log\ProcFactory_0000000026358A28.log created on 2018-07-25 at 02:29:53 PM
 System Logging Level = 2
 Searching D:\Ionic_Polymer_Glove\Read_Reference_Sensor\ProcPlugins\*.dll for processing plugins.
 Trying to load FilterBaselineDriftLib.dll...success.
@@ -46,8 +46,8 @@ Name = FilterExpDecay; Config = 2 1 0
 Getting builder...success.
 Building processor for FilterExpDecay...successfully built 1 nodes.
 After adding new ones, total processor list is 1
-Creating processor from ProcScale  000000001307DFD0 0 1 0 
-Name = ProcScale; Config = 000000001307DFD0 0 1 0 
+Creating processor from ProcScale  000000002651E090 0 1 0 
+Name = ProcScale; Config = 000000002651E090 0 1 0 
 Getting builder...success.
 Building processor for ProcScale...successfully built 1 nodes.
 After adding new ones, total processor list is 1
@@ -61,8 +61,8 @@ Name = FilterExpDecay; Config = 2 1 0
 Getting builder...success.
 Building processor for FilterExpDecay...successfully built 1 nodes.
 After adding new ones, total processor list is 1
-Creating processor from ProcNoScale  000000001307DFD0 0 1 0 
-Name = ProcNoScale; Config = 000000001307DFD0 0 1 0 
+Creating processor from ProcNoScale  000000002651E090 0 1 0 
+Name = ProcNoScale; Config = 000000002651E090 0 1 0 
 Getting builder...success.
 Building processor for ProcNoScale...successfully built 1 nodes.
 After adding new ones, total processor list is 1
