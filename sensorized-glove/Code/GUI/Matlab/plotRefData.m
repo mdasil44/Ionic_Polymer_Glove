@@ -1,5 +1,5 @@
 function plotRefData(obj, event, app)
-    lbf_to_N = 0.224808942443;  % (lbf / lbf_to_N) = N
+    LBF_TO_N = 0.224808942443;  % (lbf / lbf_to_N) = N
 
     data = zeros((app.BufferSize),1);
     dataPtr =  libpointer('singlePtr',data);
@@ -26,7 +26,7 @@ function plotRefData(obj, event, app)
             if app.UnitSwitch.Value == 'Pound-Force'
                 app.totalData = [app.totalData data(i)];
             elseif app.UnitSwitch.Value == 'Newtons    '
-                app.totalData = [app.totalData (data(i)/lbf_to_N)];
+                app.totalData = [app.totalData (data(i)/LBF_TO_N)];
             end
         end
         
