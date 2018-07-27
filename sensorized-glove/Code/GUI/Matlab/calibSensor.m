@@ -1,6 +1,8 @@
 function calibSensor(obj,event,app)
     LBF_TO_N = 0.224808942443;  % (lbf / LBF_TO_N) = N
-
+    
+    Lamp = nan;
+    
     data = zeros((app.BufferSize),1);
     dataPtr =  libpointer('singlePtr',data);
     times = zeros(app.BufferSize,1);
@@ -24,38 +26,52 @@ function calibSensor(obj,event,app)
         switch app.SensorDropDown.Value
             case 'I1'
                 app.calibCap = app.cap5AdjData;
+                Lamp = app.I1.Enable;
             case 'I2'
                 disp('I2 sensor not connected')
                 app.I2.Enable = 'on';
             case 'I3'
                 app.calibCap = app.cap6AdjData;
+                Lamp = app.I3.Enable;
             case 'M1'
                 app.calibCap = app.cap7AdjData;
+                Lamp = app.M1.Enable;
             case 'M3'
                 app.calibCap = app.cap8AdjData;
+                Lamp = app.M3.Enable;
             case 'R1'
                 app.calibCap = app.cap9AdjData;
+                Lamp = app.R1.Enable;
             case 'R3'
                 app.calibCap = app.cap11AdjData;
+                Lamp = app.R3.Enable;
             case 'S1'
                 app.calibCap = app.cap10AdjData;
+                Lamp = app.S1.Enable;
             case 'S3'
                 app.calibCap = app.cap12AdjData;
+                Lamp = app.S3.Enable;
             case 'T1'
                 app.calibCap = app.cap3AdjData;
+                Lamp = app.T1.Enable;
             case 'T2'
                 app.calibCap = app.cap4AdjData;
+                Lamp = app.T2.Enable;
             case 'P1'
                 disp('P1 sensor not connected')
                 app.P1.Enable = 'on';
             case 'P2'
                 app.calibCap = app.cap2AdjData;
+                Lamp = app.P2.Enable;
             case 'P3'
                 app.calibCap = app.cap14AdjData;
+                Lamp = app.P3.Enable;
             case 'P4'
                 app.calibCap = app.cap13AdjData;
+                Lamp = app.P4.Enable;
             case 'P5'
                 app.calibCap = app.cap15AdjData;
+                Lamp = app.P5.Enable;
         end
         
         %detects when pressure is being applied on the load cell
@@ -66,7 +82,7 @@ function calibSensor(obj,event,app)
                 app.firstGoodValueCalibrating = false;
             else
                 app.TempCapVal = [app.TempCapVal (app.calibCap(end) - app.tempBiasCapForCalibration)];
-                app.LoadCellTempForce = [app.LoadCellTempForce (app.totalData(end) - app.tempBiasloadCellForCalibration);
+                app.LoadCellTempForce = [app.LoadCellTempForce (app.totalData(end) - app.tempBiasloadCellForCalibration)];
 
 
                 if app.totalData(end) > app.maxForceEditField.Value
@@ -82,39 +98,26 @@ function calibSensor(obj,event,app)
                     app.r2_deterCoeff = calculateLinearRegressionForCalibration();%app.TempCapVal, app.LoadCellTempForce, app.tempSlope, app.tempIntersec
                     if abs(app.r2_deterCoeff) >= 0.97  % && abs(app.tempIntersec) <= 0.5
                         disp('Sensor calibrated properly. Proceed with the next sensor.');    % r2: " << r2_deterCoeff << " m: " << tempSlope << " b: " << tempIntersec;
-                        ui->calibrationResultLabel->setText(QString::fromStdString(msg.str()));
+                        Lamp = 'on';
+                        
                         %saves new calibration parameters
-                        FSRCalibrationValues[sensorToCalibrate][0] = tempSlope;
-                        FSRCalibrationValues[sensorToCalibrate][1] = 0;%tempIntersec;
-                        sensorToCalibrate++;
-
-                        %calibration completed when the sensorToCalibrate counter equals 16
-                        if (sensorToCalibrate == 16)
-                            emit ui->actionCalibrate->triggered(false);
-                            ui->actionCalibrate->setChecked(false);
-                            QMessageBox calibrationMsgBox;
-                            calibrationMsgBox.setText("Calibration of the FSR pressure sensors completed.");
-                            calibrationMsgBox.exec();
-                            ui->logger->append("Calibration completed.");
-                            saveCalibrationValues();
-                        end
+                        app.CapCalibrationValues(sensorToCalibrate, 1) = tempSlope;
+                        app.CapCalibrationValues(sensorToCalibrate, 2) = 0;%tempIntersec;
                     else
-                        std::stringstream msg;
-                        msg << "<font color='Red'>Sensor was NOT calibrated properly. Please repeat calibration.<br> r2: " << r2_deterCoeff << " m: " << tempSlope << " b: " << tempIntersec;
-                        ui->calibrationResultLabel->setText(QString::fromStdString(msg.str()));
+                        disp('Sensor was NOT calibrated properly. Please repeat calibration.'   % r2: " << r2_deterCoeff << " m: " << tempSlope << " b: " << tempIntersec;
+                        Lamp = 'off';
                     end
-                    FSRTempResistance.clear();
-                    LoadCellTempForce.clear();
-                    ::Sleep(1500);
+                    app.TempCapVal = nan;
+                    app.LoadCellTempForce = nan;
                 end
             end
         else
             %to ensure calibration works in case it is restarted
-            FSRTempResistance.clear();
-            LoadCellTempForce.clear();
-            tempBiasloadCellForCalibration=0;
-            tempBiasFSRForCalibration=0;
-            firstGoodValueCalibrating = true;
+            app.TempCapVal = nan;
+            app.LoadCellTempForce = nan;
+            app.tempBiasloadCellForCalibration = 0;
+            app.tempBiasCapForCalibration = 0;
+            app.firstGoodValueCalibrating = true;
         end
     end
 end
