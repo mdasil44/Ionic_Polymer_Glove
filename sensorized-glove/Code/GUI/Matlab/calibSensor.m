@@ -1,78 +1,81 @@
 function calibSensor(obj,event,app)
     LBF_TO_N = 0.224808942443;  % (lbf / LBF_TO_N) = N
     
-    Lamp = nan;
+    enable = 'off';
     
-    data = zeros((app.BufferSize),1);
-    dataPtr =  libpointer('singlePtr',data);
-    times = zeros(app.BufferSize,1);
-    timesPtr = libpointer('uint32Ptr',times);
+    sensorToCalibrate = 0;
     
-    [app.nReady,times,data] = calllib('ppsRef','ppsGetData',...
-        app.BufferSize,timesPtr,dataPtr);
-    if app.nReady ~= app.BufferSize % First ppsGetData fills buffer with garbage
+    switch app.SensorDropDown.Value
+        case 'I1'
+            app.calibCap = app.cap5AdjData;
+            sensorToCalibrate = 5;
+        case 'I2'
+            disp('I2 sensor not connected')
+            app.I2.Enable = 'on';
+            app.Calibrating = false;
+        case 'I3'
+            app.calibCap = app.cap6AdjData;
+            sensorToCalibrate = 6;
+        case 'M1'
+            app.calibCap = app.cap7Data;
+            sensorToCalibrate = 7;
+        case 'M3'
+            app.calibCap = app.cap8AdjData;
+            sensorToCalibrate = 8;
+        case 'R1'
+            app.calibCap = app.cap12AdjData;
+            sensorToCalibrate = 12;
+        case 'R3'
+            app.calibCap = app.cap11AdjData;
+            sensorToCalibrate = 11;
+        case 'S1'
+            app.calibCap = app.cap10AdjData;
+            sensorToCalibrate = 10;
+        case 'S3'
+            app.calibCap = app.cap9AdjData;
+            sensorToCalibrate = 9;
+        case 'T1'
+            app.calibCap = app.cap3Data;
+            sensorToCalibrate = 3;
+        case 'T2'
+            app.calibCap = app.cap4AdjData;
+            sensorToCalibrate = 4;
+        case 'P1'
+            disp('P1 sensor not connected')
+            app.P1.Enable = 'on';
+            app.Calibrating = false;
+        case 'P2'
+            app.calibCap = app.cap2AdjData;
+            sensorToCalibrate = 2;
+        case 'P3'
+            app.calibCap = app.cap14AdjData;
+            sensorToCalibrate = 14;
+        case 'P4'
+            app.calibCap = app.cap13AdjData;
+            sensorToCalibrate = 13;
+        case 'P5'
+            app.calibCap = app.cap15AdjData;
+            sensorToCalibrate = 15;
+    end
+    
+    [app.nReady,app.times,app.data] = calllib('PPSRef','ppsGetData',...
+        app.BufferSize,app.timesPtr,app.dataPtr);
+    
+    if app.nReady ~= app.BufferSize && app.nReady > 0 && app.Calibrating % First ppsGetData fills buffer with garbage
         for i = 1:app.nReady
-            app.totalTime = [app.totalTime times(i)];
+            app.totalTime = [app.totalTime app.times(i)];
             if app.UnitDropDown.Value == 'lbf'
-                app.totalData = [app.totalData data(i)];
+                app.totalData = [app.totalData app.data(i)];
             elseif app.UnitDropDown.Value == 'N'
-                app.totalData = [app.totalData (data(i)/LBF_TO_N)];
+                app.totalData = [app.totalData (app.data(i)/LBF_TO_N)];
             end
         end
         
-        app.ReadingLamp.Enable = 'on';
+        app.ReadyLamp.Enable = 'on';
 
+        app.CurrentValueEditField_2.Value = app.totalData(end);
         app.RefGauge.Value = app.totalData(end);
-        switch app.SensorDropDown.Value
-            case 'I1'
-                app.calibCap = app.cap5AdjData;
-                Lamp = app.I1.Enable;
-            case 'I2'
-                disp('I2 sensor not connected')
-                app.I2.Enable = 'on';
-            case 'I3'
-                app.calibCap = app.cap6AdjData;
-                Lamp = app.I3.Enable;
-            case 'M1'
-                app.calibCap = app.cap7AdjData;
-                Lamp = app.M1.Enable;
-            case 'M3'
-                app.calibCap = app.cap8AdjData;
-                Lamp = app.M3.Enable;
-            case 'R1'
-                app.calibCap = app.cap9AdjData;
-                Lamp = app.R1.Enable;
-            case 'R3'
-                app.calibCap = app.cap11AdjData;
-                Lamp = app.R3.Enable;
-            case 'S1'
-                app.calibCap = app.cap10AdjData;
-                Lamp = app.S1.Enable;
-            case 'S3'
-                app.calibCap = app.cap12AdjData;
-                Lamp = app.S3.Enable;
-            case 'T1'
-                app.calibCap = app.cap3AdjData;
-                Lamp = app.T1.Enable;
-            case 'T2'
-                app.calibCap = app.cap4AdjData;
-                Lamp = app.T2.Enable;
-            case 'P1'
-                disp('P1 sensor not connected')
-                app.P1.Enable = 'on';
-            case 'P2'
-                app.calibCap = app.cap2AdjData;
-                Lamp = app.P2.Enable;
-            case 'P3'
-                app.calibCap = app.cap14AdjData;
-                Lamp = app.P3.Enable;
-            case 'P4'
-                app.calibCap = app.cap13AdjData;
-                Lamp = app.P4.Enable;
-            case 'P5'
-                app.calibCap = app.cap15AdjData;
-                Lamp = app.P5.Enable;
-        end
+
         
         %detects when pressure is being applied on the load cell
         if app.totalData(end) > 0.01
@@ -83,9 +86,8 @@ function calibSensor(obj,event,app)
             else
                 app.TempCapVal = [app.TempCapVal (app.calibCap(end) - app.tempBiasCapForCalibration)];
                 app.LoadCellTempForce = [app.LoadCellTempForce (app.totalData(end) - app.tempBiasloadCellForCalibration)];
-
-
-                if app.totalData(end) > app.maxForceEditField.Value
+                
+                if app.totalData(end) > app.MaxForceEditField.Value
                     app.r2_deterCoeff = 0;
                     app.tempSlope = 1;
                     app.tempIntersec = 0;
@@ -95,17 +97,25 @@ function calibSensor(obj,event,app)
                 %    qDebug() << FSRTempResistance[i] << "   " << LoadCellTempForce[i];
                     %%%%%%%%%%%%%
 
-                    app.r2_deterCoeff = calculateLinearRegressionForCalibration();%app.TempCapVal, app.LoadCellTempForce, app.tempSlope, app.tempIntersec
-                    if abs(app.r2_deterCoeff) >= 0.97  % && abs(app.tempIntersec) <= 0.5
-                        disp('Sensor calibrated properly. Proceed with the next sensor.');    % r2: " << r2_deterCoeff << " m: " << tempSlope << " b: " << tempIntersec;
-                        Lamp = 'on';
+                    calculateLinearRegressionForCalibration(obj,event,app);%app.TempCapVal, app.LoadCellTempForce, app.tempSlope, app.tempIntersec
+                    
+                    app.r2EditField.Value = app.r2_deterCoeff;
+                    app.SlopeEditField.Value = app.tempSlope;
+                    
+                    if abs(app.r2_deterCoeff) >= 0.92  % && abs(app.tempIntersec) <= 0.5
+                        app.ResultsTextArea.Value = 'Sensor calibrated properly. Proceed with the next sensor.';    % r2: " << r2_deterCoeff << " m: " << tempSlope << " b: " << tempIntersec;
+                        enable = 'on';
                         
                         %saves new calibration parameters
-                        app.CapCalibrationValues(sensorToCalibrate, 1) = tempSlope;
+                        app.CapCalibrationValues(sensorToCalibrate, 1) = app.tempSlope;
                         app.CapCalibrationValues(sensorToCalibrate, 2) = 0;%tempIntersec;
+                        
+                        app.Calibrating = false;
                     else
-                        disp('Sensor was NOT calibrated properly. Please repeat calibration.'   % r2: " << r2_deterCoeff << " m: " << tempSlope << " b: " << tempIntersec;
-                        Lamp = 'off';
+                        app.ResultsTextArea.Value = 'Sensor was NOT calibrated properly. Please repeat calibration.';   % r2: " << r2_deterCoeff << " m: " << tempSlope << " b: " << tempIntersec;
+                        enable = 'off';
+                        
+                        app.Calibrating = false;
                     end
                     app.TempCapVal = nan;
                     app.LoadCellTempForce = nan;
@@ -119,5 +129,36 @@ function calibSensor(obj,event,app)
             app.tempBiasCapForCalibration = 0;
             app.firstGoodValueCalibrating = true;
         end
+    end
+    
+    switch app.SensorDropDown.Value
+        case 'I1'
+            app.I1.Enable = enable;
+        case 'I3'
+            app.I3.Enable = enable;
+        case 'M1'
+            app.M1.Enable = enable;
+        case 'M3'
+            app.M3.Enable = enable;
+        case 'R1'
+            app.R1.Enable = enable;
+        case 'R3'
+            app.R3.Enable = enable;
+        case 'S1'
+            app.S1.Enable = enable;
+        case 'S3'
+            app.S3.Enable = enable;
+        case 'T1'
+            app.T1.Enable = enable;
+        case 'T2'
+             app.T2.Enable = enable;
+        case 'P2'
+            app.P2.Enable = enable;
+        case 'P3'
+            app.P3.Enable = enable;
+        case 'P4'
+            app.P4.Enable = enable;
+        case 'P5'
+            app.P5.Enable = enable;
     end
 end

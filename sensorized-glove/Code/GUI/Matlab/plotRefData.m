@@ -1,10 +1,5 @@
 function plotRefData(obj, event, app)
     LBF_TO_N = 0.224808942443;  % (lbf / lbf_to_N) = N
-
-    data = zeros((app.BufferSize),1);
-    dataPtr =  libpointer('singlePtr',data);
-    times = zeros(app.BufferSize,1);
-    timesPtr = libpointer('uint32Ptr',times);
     
     if calllib('PPSRef','ppsFramesReady') <= 0
         return;
@@ -18,15 +13,15 @@ function plotRefData(obj, event, app)
         app.RefSensorAxes.YLabel.String = 'Force (N)';
     end
     
-    [app.nReady,times,data] = calllib('PPSRef','ppsGetData',...
-        app.BufferSize,timesPtr,dataPtr);
+    [app.nReady,app.times,app.data] = calllib('PPSRef','ppsGetData',...
+        app.BufferSize,app.timesPtr,app.dataPtr);
     if app.nReady ~= app.BufferSize % First ppsGetData fills buffer with garbage
         for i = 1:app.nReady
-            app.totalTime = [app.totalTime times(i)];
+            app.totalTime = [app.totalTime app.times(i)];
             if app.UnitSwitch.Value == 'Pound-Force'
-                app.totalData = [app.totalData data(i)];
+                app.totalData = [app.totalData app.data(i)];
             elseif app.UnitSwitch.Value == 'Newtons    '
-                app.totalData = [app.totalData (data(i)/LBF_TO_N)];
+                app.totalData = [app.totalData (app.data(i)/LBF_TO_N)];
             end
         end
         
