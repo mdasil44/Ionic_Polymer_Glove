@@ -123,5 +123,5 @@ function dataCallback(obj, event, app)
         app.gyroYData = app.gyroYData(1:minData);
         app.gyroZData = app.gyroZData(1:minData);
 
-    end     
+    end
 end

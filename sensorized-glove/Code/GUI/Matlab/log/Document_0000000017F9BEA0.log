@@ -1,7 +1,7 @@
-Log file D:\Ionic_Polymer_Glove\sensorized-glove\Code\GUI\Matlab\log\Document_000000001256BF60.log created on 2018-07-31 at 05:21:31 PM
+Log file D:\Ionic_Polymer_Glove\sensorized-glove\Code\GUI\Matlab\log\Document_0000000017F9BEA0.log created on 2018-08-01 at 04:28:48 PM
 System Logging Level = 2
-Creating default base document 000000001256BF60
-Creating new document 000000001256BF60 from D:\Ionic_Polymer_Glove\sensorized-glove\Code\GUI\Matlab\setup\Reference.cfg
+Creating default base document 0000000017F9BEA0
+Creating new document 0000000017F9BEA0 from D:\Ionic_Polymer_Glove\sensorized-glove\Code\GUI\Matlab\setup\Reference.cfg
 Parameter::load returned 9
 Loading user settings from Reference-set.txt...
 Starting hardware creation process for 1 devices
@@ -27,5 +27,5 @@ Adding filters to incoming data buffers...
 done.
 Starting data acquisition...done.
 Finished creating new Capture Document
-Destroying Capture document 000000001256BF60
+Destroying Capture document 0000000017F9BEA0
 Stopping all running hardware...done.

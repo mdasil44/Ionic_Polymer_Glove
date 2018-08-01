@@ -17,7 +17,7 @@ function calibSensor(obj,event,app)
             app.calibCap = app.cap6AdjData;
             sensorToCalibrate = 6;
         case 'M1'
-            app.calibCap = app.cap7Data;
+            app.calibCap = app.cap7AdjData;
             sensorToCalibrate = 7;
         case 'M3'
             app.calibCap = app.cap8AdjData;
@@ -35,7 +35,7 @@ function calibSensor(obj,event,app)
             app.calibCap = app.cap9AdjData;
             sensorToCalibrate = 9;
         case 'T1'
-            app.calibCap = app.cap3Data;
+            app.calibCap = app.cap3AdjData;
             sensorToCalibrate = 3;
         case 'T2'
             app.calibCap = app.cap4AdjData;
@@ -78,7 +78,8 @@ function calibSensor(obj,event,app)
 
         
         %detects when pressure is being applied on the load cell
-        if app.totalData(end) > 0.01
+%         temp = size(app.totalData);
+        if app.totalData(end) > 0.01 %&& temp(2) > 10
             if app.firstGoodValueCalibrating
                 app.tempBiasloadCellForCalibration = app.totalData(end);  %for bias during calibration
                 app.tempBiasCapForCalibration = app.calibCap(end);
@@ -86,16 +87,29 @@ function calibSensor(obj,event,app)
             else
                 app.TempCapVal = [app.TempCapVal (app.calibCap(end) - app.tempBiasCapForCalibration)];
                 app.LoadCellTempForce = [app.LoadCellTempForce (app.totalData(end) - app.tempBiasloadCellForCalibration)];
-                
+
                 if app.totalData(end) > app.MaxForceEditField.Value
                     app.r2_deterCoeff = 0;
                     app.tempSlope = 1;
                     app.tempIntersec = 0;
-
+                    
                     %For debugging
                 %    for int i = 0; i<FSRTempResistance.size(); i++)
                 %    qDebug() << FSRTempResistance[i] << "   " << LoadCellTempForce[i];
                     %%%%%%%%%%%%%
+                    
+                    figure('Name','A')
+                    plot(app.TempCapVal)
+                    hold on
+                    temp = smooth(app.TempCapVal(:));
+                    app.TempCapVal = smooth(temp(:));
+                    plot(app.TempCapVal)
+                    
+                    figure('Name','Test')
+                    plot(app.TempCapVal,app.LoadCellTempForce)
+                    
+                    figure('Name','B')
+                    plot(app.LoadCellTempForce)
 
                     calculateLinearRegressionForCalibration(obj,event,app);%app.TempCapVal, app.LoadCellTempForce, app.tempSlope, app.tempIntersec
                     
@@ -107,13 +121,20 @@ function calibSensor(obj,event,app)
                         enable = 'on';
                         
                         %saves new calibration parameters
-                        app.CapCalibrationValues(sensorToCalibrate, 1) = app.tempSlope;
+                        if app.tempSlope > 0    %Capacitance values only decrease with applied pressure, so a positive slope means that the sensor was previously calibrated
+                            app.CapCalibrationValues(sensorToCalibrate, 1) = app.CapCalibrationValues(sensorToCalibrate, 1) * app.tempSlope;
+                        else
+                            app.CapCalibrationValues(sensorToCalibrate, 1) = app.tempSlope;
+                        end
                         app.CapCalibrationValues(sensorToCalibrate, 2) = 0;%tempIntersec;
                         
                         app.Calibrating = false;
                     else
                         app.ResultsTextArea.Value = 'Sensor was NOT calibrated properly. Please repeat calibration.';   % r2: " << r2_deterCoeff << " m: " << tempSlope << " b: " << tempIntersec;
                         enable = 'off';
+                        
+%                         figure('Name','Test')
+%                         plot(app.TempCapVal,app.LoadCellTempForce)
                         
                         app.Calibrating = false;
                     end

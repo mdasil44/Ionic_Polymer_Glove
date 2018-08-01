@@ -1,0 +1,1 @@
+Plot out the TempCapVal and LoadCellTempForce to visualize what the program is comparing
