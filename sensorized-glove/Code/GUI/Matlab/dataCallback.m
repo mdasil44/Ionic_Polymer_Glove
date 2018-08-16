@@ -124,4 +124,21 @@ function dataCallback(obj, event, app)
         app.gyroZData = app.gyroZData(1:minData);
 
     end
+    
+    app.cap1FiltData = [nan, filter(app.B,app.A,app.cap1AdjData(2:end))];
+    app.cap2FiltData = [nan, filter(app.B,app.A,app.cap2AdjData(2:end))];
+    app.cap3FiltData = [nan, filter(app.B,app.A,app.cap3AdjData(2:end))];
+    app.cap4FiltData = [nan, filter(app.B,app.A,app.cap4AdjData(2:end))];
+    app.cap5FiltData = [nan, filter(app.B,app.A,app.cap5AdjData(2:end))];
+    app.cap6FiltData = [nan, filter(app.B,app.A,app.cap6AdjData(2:end))];
+    app.cap7FiltData = [nan, filter(app.B,app.A,app.cap7AdjData(2:end))];
+    app.cap8FiltData = [nan, filter(app.B,app.A,app.cap8AdjData(2:end))];
+    app.cap9FiltData = [nan, filter(app.B,app.A,app.cap9AdjData(2:end))];
+    app.cap10FiltData = [nan, filter(app.B,app.A,app.cap10AdjData(2:end))];
+    app.cap11FiltData = [nan, filter(app.B,app.A,app.cap11AdjData(2:end))];
+    app.cap12FiltData = [nan, filter(app.B,app.A,app.cap12AdjData(2:end))];
+    app.cap13FiltData = [nan, filter(app.B,app.A,app.cap13AdjData(2:end))];
+    app.cap14FiltData = [nan, filter(app.B,app.A,app.cap14AdjData(2:end))];
+    app.cap15FiltData = [nan, filter(app.B,app.A,app.cap15AdjData(2:end))];
+    app.cap16FiltData = [nan, filter(app.B,app.A,app.cap16AdjData(2:end))];
 end

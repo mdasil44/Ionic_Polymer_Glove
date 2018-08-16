@@ -8,10 +8,10 @@ function calculateLinearRegressionForCalibration(obj, event, app)
     b = 0;
     ss_tot = 0;
     ss_res = 0;
-    numberOfSamples = size(app.TempCapVal);
+    numberOfSamples = length(app.TempCapVal);
         
     %calculating parameters to find linear regression equation
-    for i = 2:numberOfSamples(1)
+    for i = 2:numberOfSamples
 %        x+= loadCellvalues(i);
 %        y+= FSRvalues(i);
 %        xy+= loadCellvalues(i) * FSRvalues(i);
@@ -25,14 +25,14 @@ function calculateLinearRegressionForCalibration(obj, event, app)
     end
     
     %calculating linear regression equation
-    a = (y*x2 - x*xy)/(numberOfSamples(1)*x2 - x*x);
-    b = (numberOfSamples(1)*xy - x*y)/(numberOfSamples(1)*x2 - x*x);
+    a = (y*x2 - x*xy)/(numberOfSamples*x2 - x*x);
+    b = (numberOfSamples*xy - x*y)/(numberOfSamples*x2 - x*x);
 
     %calculating the coefficient of determination
-    for i = 2:numberOfSamples(1)
+    for i = 2:numberOfSamples
 %        ss_tot+= pow(FSRvalues(i) - y/numberOfSamples,2);
 %        ss_res+= pow(FSRvalues(i) - (a + b*loadCellvalues(i)),2);
-        ss_tot = ss_tot + power(app.LoadCellTempForce(i) - y/numberOfSamples(1),2);
+        ss_tot = ss_tot + power(app.LoadCellTempForce(i) - y/numberOfSamples,2);
         ss_res = ss_res + power(app.LoadCellTempForce(i) - (a + b*app.TempCapVal(i)),2);
 
     end

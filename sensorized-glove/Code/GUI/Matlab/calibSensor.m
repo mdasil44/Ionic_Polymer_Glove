@@ -8,54 +8,54 @@ function calibSensor(obj,event,app)
     if app.Calibrating
         switch app.SensorDropDown.Value
             case 'I1'
-                app.calibCap = app.cap5AdjData;
+                app.calibCap = app.cap5FiltData;
                 sensorToCalibrate = 5;
             case 'I2'
                 disp('I2 sensor not connected')
                 app.I2.Enable = 'on';
                 app.Calibrating = false;
             case 'I3'
-                app.calibCap = app.cap6AdjData;
+                app.calibCap = app.cap6FiltData;
                 sensorToCalibrate = 6;
             case 'M1'
-                app.calibCap = app.cap7AdjData;
+                app.calibCap = app.cap7FiltData;
                 sensorToCalibrate = 7;
             case 'M3'
-                app.calibCap = app.cap8AdjData;
+                app.calibCap = app.cap8FiltData;
                 sensorToCalibrate = 8;
             case 'R1'
-                app.calibCap = app.cap12AdjData;
+                app.calibCap = app.cap12FiltData;
                 sensorToCalibrate = 12;
             case 'R3'
-                app.calibCap = app.cap11AdjData;
+                app.calibCap = app.cap11FiltData;
                 sensorToCalibrate = 11;
             case 'S1'
-                app.calibCap = app.cap10AdjData;
+                app.calibCap = app.cap10FiltData;
                 sensorToCalibrate = 10;
             case 'S3'
-                app.calibCap = app.cap9AdjData;
+                app.calibCap = app.cap9FiltData;
                 sensorToCalibrate = 9;
             case 'T1'
-                app.calibCap = app.cap3AdjData;
+                app.calibCap = app.cap3FiltData;
                 sensorToCalibrate = 3;
             case 'T2'
-                app.calibCap = app.cap4AdjData;
+                app.calibCap = app.cap4FiltData;
                 sensorToCalibrate = 4;
             case 'P1'
                 disp('P1 sensor not connected')
                 app.P1.Enable = 'on';
                 app.Calibrating = false;
             case 'P2'
-                app.calibCap = app.cap2AdjData;
+                app.calibCap = app.cap2FiltData;
                 sensorToCalibrate = 2;
             case 'P3'
-                app.calibCap = app.cap14AdjData;
+                app.calibCap = app.cap14FiltData;
                 sensorToCalibrate = 14;
             case 'P4'
-                app.calibCap = app.cap13AdjData;
+                app.calibCap = app.cap13FiltData;
                 sensorToCalibrate = 13;
             case 'P5'
-                app.calibCap = app.cap15AdjData;
+                app.calibCap = app.cap15FiltData;
                 sensorToCalibrate = 15;
         end
     
@@ -77,7 +77,6 @@ function calibSensor(obj,event,app)
             app.CurrentValueEditField_2.Value = app.totalData(end);
             app.RefGauge.Value = app.totalData(end);
 
-        
             %detects when pressure is being applied on the load cell
 %             temp = size(app.totalData);
             if app.totalData(end) > 0.01 %&& temp(2) > 10
@@ -88,7 +87,10 @@ function calibSensor(obj,event,app)
                 else
                     app.TempCapVal = [app.TempCapVal (app.calibCap(end) - app.tempBiasCapForCalibration)];
                     app.LoadCellTempForce = [app.LoadCellTempForce (app.totalData(end) - app.tempBiasloadCellForCalibration)];
-
+                    
+                        plot(app.TempCapVal)
+                        hold on
+                    
                     if app.totalData(end) > app.MaxForceEditField.Value
                        app.r2_deterCoeff = 0;
                        app.tempSlope = 1;
@@ -99,25 +101,25 @@ function calibSensor(obj,event,app)
                     %    qDebug() << FSRTempResistance[i] << "   " << LoadCellTempForce[i];
                         %%%%%%%%%%%%%
                     
-%                         figure('Name','A')
-%                         plot(app.TempCapVal)
+                        figure('Name','A')
+                        plot(app.TempCapVal)
 %                         hold on
 %                         xlswrite('TempCapVal.xlsx',app.TempCapVal);
                     
-                        temp = smooth(app.TempCapVal(:));
-                        app.TempCapVal = smooth(temp(:));
+%                         temp = smooth(app.TempCapVal(:));
+%                         app.TempCapVal = smooth(temp(:));
                     
 %                         plot(app.TempCapVal)
 %                     
-%                         figure('Name','Test')
-%                         plot(app.TempCapVal,app.LoadCellTempForce)
+                        figure('Name','Test')
+                        plot(app.TempCapVal,app.LoadCellTempForce)
 %                     
 %                         figure('Name','B')
 %                         plot(app.LoadCellTempForce)
 %                         xlswrite('LoadCellTempForce.xlsx',app.LoadCellTempForce);
 
                         calculateLinearRegressionForCalibration(obj,event,app);%app.TempCapVal, app.LoadCellTempForce, app.tempSlope, app.tempIntersec
-                    
+                        
                         app.r2EditField.Value = app.r2_deterCoeff;
                         app.SlopeEditField.Value = app.tempSlope;
                     
@@ -143,6 +145,7 @@ function calibSensor(obj,event,app)
                         
                             app.Calibrating = false;
                         end
+                        
                         app.TempCapVal = nan;
                         app.LoadCellTempForce = nan;
                     end

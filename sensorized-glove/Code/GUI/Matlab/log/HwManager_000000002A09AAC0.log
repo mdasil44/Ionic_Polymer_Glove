@@ -1,6 +1,6 @@
-Log file D:\Ionic_Polymer_Glove\sensorized-glove\Code\GUI\Matlab\log\HwManager_0000000019F8AAC0.log created on 2018-08-15 at 11:37:19 AM
+Log file D:\Ionic_Polymer_Glove\sensorized-glove\Code\GUI\Matlab\log\HwManager_000000002A09AAC0.log created on 2018-08-16 at 04:54:41 PM
 System Logging Level = 2
-Creating Hardware Manager 0000000019F8AAC0...
+Creating Hardware Manager 000000002A09AAC0...
 Using Plugin folder of D:\Ionic_Polymer_Glove\sensorized-glove\Code\GUI\Matlab\HwPlugins\
 Building factory using searchPath D:\Ionic_Polymer_Glove\sensorized-glove\Code\GUI\Matlab\HwPlugins\Hw*Lib.dll
 Loading HwArrayG2Lib.dll...success!
@@ -19,9 +19,9 @@ ArrayG2 ArrayG3 D600 DigiUsb Emulator Loadstar Mensor Nidaq OmegaTemp Reference 
 
 Attaching device type Reference from file D:\Ionic_Polymer_Glove\sensorized-glove\Code\GUI\Matlab\setup\Reference_hw.txt
 98: Constructor found in factory.
-102: Device created.
-181: Starting acquisition threads...
-182: Device 0: Success. Done
-993263: Stopping acquisition thread:Device 0: is alive. Terminating... done.
-Destroying Hardware Manager 0000000019F8AAC0
+98: Device created.
+198: Starting acquisition threads...
+200: Device 0: Success. Done
+18574: Stopping acquisition thread:Device 0: is alive. Terminating... done.
+Destroying Hardware Manager 000000002A09AAC0
 Factory is purged
