@@ -19,6 +19,7 @@ stopband_attenuation = 20;
 y = filter(B,A,array);
 
 plot(y);
+plot(smooth(y(:)));
 
 % figure('Name','Envelope','NumberTitle','off')
 % [up,lo] = envelope(array,1,'peak');

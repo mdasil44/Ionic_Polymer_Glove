@@ -88,9 +88,6 @@ function calibSensor(obj,event,app)
                     app.TempCapVal = [app.TempCapVal (app.calibCap(end) - app.tempBiasCapForCalibration)];
                     app.LoadCellTempForce = [app.LoadCellTempForce (app.totalData(end) - app.tempBiasloadCellForCalibration)];
                     
-                        plot(app.TempCapVal)
-                        hold on
-                    
                     if app.totalData(end) > app.MaxForceEditField.Value
                        app.r2_deterCoeff = 0;
                        app.tempSlope = 1;
@@ -101,19 +98,18 @@ function calibSensor(obj,event,app)
                     %    qDebug() << FSRTempResistance[i] << "   " << LoadCellTempForce[i];
                         %%%%%%%%%%%%%
                     
-                        figure('Name','A')
-                        plot(app.TempCapVal)
+%                         figure('Name','A')
+%                         plot(app.TempCapVal)
 %                         hold on
 %                         xlswrite('TempCapVal.xlsx',app.TempCapVal);
                     
-%                         temp = smooth(app.TempCapVal(:));
-%                         app.TempCapVal = smooth(temp(:));
+%                         app.TempCapVal = smooth(app.TempCapVal(:));
                     
 %                         plot(app.TempCapVal)
-%                     
+                    
                         figure('Name','Test')
                         plot(app.TempCapVal,app.LoadCellTempForce)
-%                     
+                    
 %                         figure('Name','B')
 %                         plot(app.LoadCellTempForce)
 %                         xlswrite('LoadCellTempForce.xlsx',app.LoadCellTempForce);
@@ -139,9 +135,6 @@ function calibSensor(obj,event,app)
                         else
                             app.ResultsTextArea.Value = 'Sensor was NOT calibrated properly. Please repeat calibration.';   % r2: " << r2_deterCoeff << " m: " << tempSlope << " b: " << tempIntersec;
                             enable = 'off';
-                        
-%                             figure('Name','Test')
-%                             plot(app.TempCapVal,app.LoadCellTempForce)
                         
                             app.Calibrating = false;
                         end

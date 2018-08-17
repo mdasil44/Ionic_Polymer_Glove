@@ -1,1 +1,23 @@
-Plot out the TempCapVal and LoadCellTempForce to visualize what the program is comparing
+To do either linear or quadratic linear regression, have the program run both functions. These values will have to
+store in two different variables, one for each of the r2 values and one to store the slopes (a 2d matrix will be 
+required for each, but is more important for quadratic if we are ignoring the intersection value). Quadratic 
+function can be applied to the data the same as the linear function by running each new data point in the data
+callback function through the formula and then storing it in the adjusted matrix (linear: newPoint = data*slope;
+quadratic: newPoint = a*data*data + b*data). 
+
+In the end, the program will decide which regression to use based on the r2 values (whichever is closer to 1 will 
+be used). To add to this, another vector or matrix must be created to store this decision of which regression to
+use. Using that decision vector, an if statement could be used for each Adj Data point (that is intensive though).
+
+
+Must determine a means of testing what applying a quadratic linear regression will look like with minimal major
+changes to the app code (in case its not actually useful):
+	Use M3 sensor, which has so far been giving a fairly nonlinear response
+	Make small temporary scalar or matrix variables to keep changes minimal
+		Only change variable names in Quadatic Regression function rather than mess with the variable 
+		names needed in the rest of the app
+		Small variables can serve as modifiable placeholder, easily adjustable later into larger, 
+		non-scalar ones if necessary
+
+***This might not work because of the noise in the signal causing the data points to not be a neat quadratic,
+just as they are not usuall a neat linear pattern either
