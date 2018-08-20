@@ -146,19 +146,12 @@ function calibSensor(obj,event,app)
                                 disp(app.tempQuadrA);
                                 disp(app.tempQuadrB);
                                 disp(app.tempQuadrC);
-                                x = (min(app.TempCapVal)-1):0.2:0;
+                                x = (min(TempCapVal)-1):0.2:0;
                                 y = zeros(length(x),1);
                                 for i = 1:length(x)
                                     y(i) = app.tempQuadrA*x(i)*x(i)+app.tempQuadrB*x(i)+app.tempQuadrC;
                                 end
                                 plot(x,y)
-                                
-                                temp = zeros(length(app.TempCapVal));
-                                for i = 1:length(app.TempCapVal)
-                                    temp(i) = app.tempQuadrA*app.TempCapVal(i)*app.TempCapVal(i)+app.tempQuadrB*app.TempCapVal(i)+app.tempQuadrC;
-                                end
-                                figure();
-                                plot(temp,app.LoadCellTempForce);
                             end
                         
                             app.Calibrating = false;

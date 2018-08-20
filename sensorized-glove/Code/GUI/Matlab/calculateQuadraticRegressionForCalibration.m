@@ -48,7 +48,7 @@ function calculateQuadraticRegressionForCalibration(obj, event, app)
         ss_res = ss_res + power((app.LoadCellTempForce(i) - a*app.TempCapVal(i)*app.TempCapVal(i) - b*app.TempCapVal(i) - c),2);
 
     end
-    app.r2_deterCoeff = 1 - (ss_res / ss_tot);
+    app.quadr2_deterCoeff = 1 - (ss_res / ss_tot);
 %     disp(y)
 %     disp(x)
 %     disp(xy)
