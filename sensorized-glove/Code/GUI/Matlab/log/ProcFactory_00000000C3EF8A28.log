@@ -1,4 +1,4 @@
-Log file D:\Ionic_Polymer_Glove\sensorized-glove\Code\GUI\Matlab\log\ProcFactory_0000000029F28A28.log created on 2018-08-20 at 02:30:04 PM
+Log file D:\Ionic_Polymer_Glove\sensorized-glove\Code\GUI\Matlab\log\ProcFactory_00000000C3EF8A28.log created on 2018-08-21 at 04:23:18 PM
 System Logging Level = 2
 Searching D:\Ionic_Polymer_Glove\sensorized-glove\Code\GUI\Matlab\ProcPlugins\*.dll for processing plugins.
 Trying to load FilterBaselineDriftLib.dll...success.
@@ -46,8 +46,8 @@ Name = FilterExpDecay; Config = 2 1 0
 Getting builder...success.
 Building processor for FilterExpDecay...successfully built 1 nodes.
 After adding new ones, total processor list is 1
-Creating processor from ProcScale  000000002A0AE190 0 1 0 
-Name = ProcScale; Config = 000000002A0AE190 0 1 0 
+Creating processor from ProcScale  00000000F467E190 0 1 0 
+Name = ProcScale; Config = 00000000F467E190 0 1 0 
 Getting builder...success.
 Building processor for ProcScale...successfully built 1 nodes.
 After adding new ones, total processor list is 1

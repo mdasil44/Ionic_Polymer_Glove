@@ -53,7 +53,7 @@ function dataCallback(obj, event, app)
     app.cap5AdjData = [ app.cap5AdjData ((str2num(sData(indIndexes(6)+1 : indIndexes(7)-1)) - app.capRef(5))*app.CapCalibrationValues(5,1)) ];
     app.cap6AdjData = [ app.cap6AdjData ((str2num(sData(indIndexes(7)+1 : indIndexes(8)-1)) - app.capRef(6))*app.CapCalibrationValues(6,1)) ];
     app.cap7AdjData = [ app.cap7AdjData ((str2num(sData(indIndexes(8)+1 : indIndexes(9)-1)) - app.capRef(7))*app.CapCalibrationValues(7,1)) ];
-    app.cap8AdjData = [ app.cap8AdjData AdjustCap((str2num(sData(indIndexes(9)+1 : indIndexes(10)-1)) - app.capRef(8)),app.CapCalibrationValues(8,:),app.CapRegrChoice(8)) ];
+    app.cap8AdjData = [ app.cap8AdjData ((str2num(sData(indIndexes(9)+1 : indIndexes(10)-1)) - app.capRef(8))*app.CapCalibrationValues(8,1)) ];
     app.cap9AdjData = [ app.cap9AdjData ((str2num(sData(indIndexes(10)+1 : indIndexes(11)-1)) - app.capRef(9))*app.CapCalibrationValues(9,1)) ];
     app.cap10AdjData = [ app.cap10AdjData ((str2num(sData(indIndexes(11)+1 : indIndexes(12)-1)) - app.capRef(10))*app.CapCalibrationValues(10,1)) ];
     app.cap11AdjData = [ app.cap11AdjData ((str2num(sData(indIndexes(12)+1 : indIndexes(13)-1)) - app.capRef(11))*app.CapCalibrationValues(11,1)) ];
@@ -141,12 +141,4 @@ function dataCallback(obj, event, app)
     app.cap14FiltData = [nan, filter(app.B,app.A,app.cap14AdjData(2:end))];
     app.cap15FiltData = [nan, filter(app.B,app.A,app.cap15AdjData(2:end))];
     app.cap16FiltData = [nan, filter(app.B,app.A,app.cap16AdjData(2:end))];
-end
-
-function x = AdjustCap(tempCapVal,calibVal,regrChoice)
-    if regrChoice == 1 && calibVal(2) ~= 0
-        x = calibVal(1)*tempCapVal*tempCapVal + tempCapVal*calibVal(2);
-    else
-        x = tempCapVal*calibVal(1);
-    end
 end

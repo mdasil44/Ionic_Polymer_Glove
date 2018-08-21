@@ -116,57 +116,27 @@ function calibSensor(obj,event,app)
 %                         xlswrite('LoadCellTempForce.xlsx',app.LoadCellTempForce);
 
                         calculateLinearRegressionForCalibration(obj,event,app);%app.TempCapVal, app.LoadCellTempForce, app.tempSlope, app.tempIntersec
-                        calculateQuadraticRegressionForCalibration(obj,event,app);
                         
-                        if app.r2_deterCoeff > app.quadr2_deterCoeff
-                            app.r2EditField.Value = app.r2_deterCoeff;
-                            app.SlopeEditField.Value = app.tempSlope;
-                            app.CapRegrChoice(sensorToCalibrate) = 0;
-                        else
-                            app.r2EditField.Value = app.quadr2_deterCoeff;
-                            app.SlopeEditField.Value = Inf;
-                            app.CapRegrChoice(sensorToCalibrate) = 1;
-                        end
+                        app.r2EditField.Value = app.r2_deterCoeff;
+                        app.SlopeEditField.Value = app.tempSlope;
                     
-                        if abs(app.r2_deterCoeff) >= 0.92 || abs(app.quadr2_deterCoeff) >= 0.92  % && abs(app.tempIntersec) <= 0.5
+                        if abs(app.r2_deterCoeff) >= 0.92  % && abs(app.tempIntersec) <= 0.5
                             app.ResultsTextArea.Value = 'Sensor calibrated properly. Proceed with the next sensor.';    % r2: " << r2_deterCoeff << " m: " << tempSlope << " b: " << tempIntersec;
                             enable = 'on';
-                        disp('1')
+                            
                             %saves new calibration parameters
-                            if app.CapRegrChoice(sensorToCalibrate) == 0
-                                if app.tempSlope > 0    %Capacitance values only decrease with applied pressure, so a positive slope means that the sensor was previously calibrated
-                                    app.CapCalibrationValues(sensorToCalibrate, 1) = app.CapCalibrationValues(sensorToCalibrate, 1) * app.tempSlope;
-                                else
-                                    app.CapCalibrationValues(sensorToCalibrate, 1) = app.tempSlope;
-                                end
-                                app.CapCalibrationValues(sensorToCalibrate, 2) = 0;%tempIntersec;
+                            if app.tempSlope > 0    %Capacitance values only decrease with applied pressure, so a positive slope means that the sensor was previously calibrated
+                                app.CapCalibrationValues(sensorToCalibrate, 1) = app.CapCalibrationValues(sensorToCalibrate, 1) * app.tempSlope;
                             else
-                                app.CapCalibrationValues(sensorToCalibrate, 1) = app.tempQuadrA;
-                                app.CapCalibrationValues(sensorToCalibrate, 2) = app.tempQuadrB;
-                                disp(app.tempQuadrA);
-                                disp(app.tempQuadrB);
-                                disp(app.tempQuadrC);
-                                x = (min(app.TempCapVal)-1):0.2:0;
-                                y = zeros(length(x),1);
-                                for i = 1:length(x)
-                                    y(i) = app.tempQuadrA*x(i)*x(i)+app.tempQuadrB*x(i)+app.tempQuadrC;
-                                end
-                                plot(x,y)
-                                
-                                temp = zeros(length(app.TempCapVal));
-                                for i = 1:length(app.TempCapVal)
-                                    temp(i) = app.tempQuadrA*app.TempCapVal(i)*app.TempCapVal(i)+app.tempQuadrB*app.TempCapVal(i)+app.tempQuadrC;
-                                end
-                                figure();
-                                plot(temp,app.LoadCellTempForce);
+                                app.CapCalibrationValues(sensorToCalibrate, 1) = app.tempSlope;
                             end
+                            app.CapCalibrationValues(sensorToCalibrate, 2) = 0; %tempIntersec;
                         
                             app.Calibrating = false;
                         else
                             app.ResultsTextArea.Value = 'Sensor was NOT calibrated properly. Please repeat calibration.';   % r2: " << r2_deterCoeff << " m: " << tempSlope << " b: " << tempIntersec;
                             enable = 'off';
                             
-                            app.CapRegrChoice(sensorToCalibrate) = 0;
                             app.Calibrating = false;
                         end
                         
