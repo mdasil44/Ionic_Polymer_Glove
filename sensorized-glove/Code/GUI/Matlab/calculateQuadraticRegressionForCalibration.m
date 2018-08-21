@@ -14,7 +14,7 @@ function calculateQuadraticRegressionForCalibration(obj, event, app)
     ss_res = 0;
     numberOfSamples = length(app.TempCapVal)-1;
         
-    %calculating parameters to find linear regression equation
+    %calculating parameters to find quadratic regression equation
     for i = 2:(numberOfSamples+1)
 %        x+= loadCellvalues(i);
 %        y+= FSRvalues(i);
@@ -31,7 +31,7 @@ function calculateQuadraticRegressionForCalibration(obj, event, app)
         x4 = x4 + app.TempCapVal(i)*app.TempCapVal(i)*app.TempCapVal(i)*app.TempCapVal(i);
     end
     
-    %calculating linear regression equation
+    %calculating quadratic regression equation
     temp1 = [x4,x3,x2;x3,x2,x;x2,x,numberOfSamples];
     temp2 = [x2y;xy;y];
     temp3 = temp1\temp2;
@@ -63,9 +63,9 @@ function calculateQuadraticRegressionForCalibration(obj, event, app)
 %     disp(ss_tot)
 %     disp(ss_res)
 
-    %the calculated values are for a linear regression where the x axis is the load cell force
+    %the calculated values are for a quadratic regression where the x axis is the load cell force
     %and the y axis is the FSR conductance.
-    %In order to use this regression for our calibration, we need to inverse the linear equation to
+    %In order to use this regression for our calibration, we need to inverse the quadratic equation to
     %related measured FSR conductance to calculated Newtons.
 
     app.tempQuadrC = c;

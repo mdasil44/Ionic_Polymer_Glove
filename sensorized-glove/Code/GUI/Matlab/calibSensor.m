@@ -118,7 +118,10 @@ function calibSensor(obj,event,app)
                         calculateLinearRegressionForCalibration(obj,event,app);%app.TempCapVal, app.LoadCellTempForce, app.tempSlope, app.tempIntersec
                         calculateQuadraticRegressionForCalibration(obj,event,app);
                         
-                        if app.r2_deterCoeff > app.quadr2_deterCoeff
+%                         disp(app.r2_deterCoeff);
+%                         disp(app.quadr2_deterCoeff);
+                        
+                        if app.r2_deterCoeff > app.quadr2_deterCoeff || app.r2_deterCoeff >= 0.92
                             app.r2EditField.Value = app.r2_deterCoeff;
                             app.SlopeEditField.Value = app.tempSlope;
                             app.CapRegrChoice(sensorToCalibrate) = 0;
@@ -131,21 +134,34 @@ function calibSensor(obj,event,app)
                         if abs(app.r2_deterCoeff) >= 0.92 || abs(app.quadr2_deterCoeff) >= 0.92  % && abs(app.tempIntersec) <= 0.5
                             app.ResultsTextArea.Value = 'Sensor calibrated properly. Proceed with the next sensor.';    % r2: " << r2_deterCoeff << " m: " << tempSlope << " b: " << tempIntersec;
                             enable = 'on';
-                        disp('1')
+                        
                             %saves new calibration parameters
                             if app.CapRegrChoice(sensorToCalibrate) == 0
                                 if app.tempSlope > 0    %Capacitance values only decrease with applied pressure, so a positive slope means that the sensor was previously calibrated
                                     app.CapCalibrationValues(sensorToCalibrate, 1) = app.CapCalibrationValues(sensorToCalibrate, 1) * app.tempSlope;
+                                    x = -1:0.2:(max(app.TempCapVal)+1);
                                 else
                                     app.CapCalibrationValues(sensorToCalibrate, 1) = app.tempSlope;
+                                    x = (min(app.TempCapVal)-1):0.2:0;
                                 end
-                                app.CapCalibrationValues(sensorToCalibrate, 2) = 0;%tempIntersec;
+                                app.CapCalibrationValues(sensorToCalibrate, 2) = app.tempIntersec;
+                                
+                                disp(app.tempSlope);
+                                disp(app.tempIntersec);
+                                
+                                y = zeros(length(x),1);
+                                for i = 1:length(x)
+                                    y(i) = app.tempSlope*x(i)+app.tempIntersec;
+                                end
+                                plot(x,y)
                             else
                                 app.CapCalibrationValues(sensorToCalibrate, 1) = app.tempQuadrA;
                                 app.CapCalibrationValues(sensorToCalibrate, 2) = app.tempQuadrB;
+                                
                                 disp(app.tempQuadrA);
                                 disp(app.tempQuadrB);
                                 disp(app.tempQuadrC);
+                                
                                 x = (min(app.TempCapVal)-1):0.2:0;
                                 y = zeros(length(x),1);
                                 for i = 1:length(x)
@@ -153,11 +169,13 @@ function calibSensor(obj,event,app)
                                 end
                                 plot(x,y)
                                 
-                                temp = zeros(length(app.TempCapVal));
-                                for i = 1:length(app.TempCapVal)
+                                temp = zeros(length(app.TempCapVal),1);
+                                temp(1) = nan;
+                                for i = 2:length(app.TempCapVal)
                                     temp(i) = app.tempQuadrA*app.TempCapVal(i)*app.TempCapVal(i)+app.tempQuadrB*app.TempCapVal(i)+app.tempQuadrC;
                                 end
-                                figure();
+                                
+                                figure()
                                 plot(temp,app.LoadCellTempForce);
                             end
                         
