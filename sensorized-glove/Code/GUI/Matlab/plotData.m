@@ -130,7 +130,8 @@ function plotData(obj, event, app)
                                     app.timeData(startTime:end), app.cap14FiltData(startTime:end), ...
                                     app.timeData(startTime:end), app.cap15FiltData(startTime:end), ...
                                     app.timeData(startTime:end), app.cap16FiltData(startTime:end));
-        
+                                       
+                                
         tempCap = nan;
         tempCap2 = nan;
         switch app.TestSensorDropDown.Value
@@ -194,6 +195,12 @@ function plotData(obj, event, app)
         app.CapAxes.YLim = [minData2 maxData2];
         
   
+        order = 2;
+        sampling_freq = 18;
+        cut_off_freq = 1;
+        passband_peak_to_peak_db = 2;
+        stopband_attenuation = 40;
+        [app.B,app.A] = ellip(order, passband_peak_to_peak_db, stopband_attenuation, cut_off_freq/(0.5*sampling_freq), 'low');
 
         app.CapacitanceAxes.XLim = [app.timeData(startTime) app.timeData(end)];
         
@@ -277,5 +284,4 @@ function plotData(obj, event, app)
         app.AccelerationAxes.YLim = [minData maxData]; 
         
     end
-       
 end

@@ -32,6 +32,8 @@
 #include <stdint.h>
 #define CTMU_MODE_EDGE 0
 #define RANGE_0_550uA 1 // .550uA
+#define RANGE_5_50uA 2  // 5.50uA
+#define RANGE_55_0uA 3  // 55.0uA
 
 #ifdef __cplusplus  // Provide C++ Compatibility
 

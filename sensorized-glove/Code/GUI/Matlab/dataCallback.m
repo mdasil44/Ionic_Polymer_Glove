@@ -141,4 +141,21 @@ function dataCallback(obj, event, app)
     app.cap14FiltData = [nan, filter(app.B,app.A,app.cap14AdjData(2:end))];
     app.cap15FiltData = [nan, filter(app.B,app.A,app.cap15AdjData(2:end))];
     app.cap16FiltData = [nan, filter(app.B,app.A,app.cap16AdjData(2:end))];
+    
+%     if app.count4 == 0
+%         app.x = 1000000;
+%     end
+% 
+%     if app.capRef(2) ~= 0 && app.count4 == 0
+%         app.x = length(app.cap2AdjData);
+%         app.count4 = app.count4 + 1;
+%     end
+%     disp(length(app.cap4AdjData))
+%     disp(app.x)
+%     if length(app.cap2AdjData) > app.x && app.timeData(end) > 30 && app.timeData(end) < 30.1
+%         disp('Recorded');
+%         xlswrite('PowerSpecAdjCap.xlsx',app.cap2AdjData(app.x:end));
+%         xlswrite('PowerSpecFiltCap.xlsx',app.cap2FiltData(app.x:end));
+%         xlswrite('PowerSpecTime.xlsx',app.timeData(app.x:end));
+%     end
 end
