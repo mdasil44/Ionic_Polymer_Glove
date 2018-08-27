@@ -126,7 +126,7 @@ function dataCallback(obj, event, app)
     end
     
     app.cap1FiltData = [nan, filter(app.B,app.A,app.cap1AdjData(2:end))];
-    app.cap2FiltData = [nan, filter(app.B,app.A,app.cap2AdjData(2:end))];
+%     app.cap2FiltData = [nan, filter(app.B,app.A,app.cap2AdjData(2:end))];
     app.cap3FiltData = [nan, filter(app.B,app.A,app.cap3AdjData(2:end))];
     app.cap4FiltData = [nan, filter(app.B,app.A,app.cap4AdjData(2:end))];
     app.cap5FiltData = [nan, filter(app.B,app.A,app.cap5AdjData(2:end))];
@@ -142,11 +142,21 @@ function dataCallback(obj, event, app)
     app.cap15FiltData = [nan, filter(app.B,app.A,app.cap15AdjData(2:end))];
     app.cap16FiltData = [nan, filter(app.B,app.A,app.cap16AdjData(2:end))];
     
-%     if app.count4 == 0
+    
+    if length(app.cap2AdjData) > 3 && app.count4 == 0
+        app.cap2FiltData2 = app.cap2AdjData(1:3); 
+        app.count4 = 1;
+    end
+    if app.count4 == 1 || app.count4 == 2
+        A = 0.5;
+        app.cap2FiltData2 = [app.cap2FiltData2, (app.cap2AdjData(end)+app.cap2AdjData(end-1)+A*app.cap2FiltData(end))];
+    end
+    
+%     if app.count4 == 1
 %         app.x = 1000000;
 %     end
 % 
-%     if app.capRef(2) ~= 0 && app.count4 == 0
+%     if app.capRef(2) ~= 0 && app.count4 == 1
 %         app.x = length(app.cap2AdjData);
 %         app.count4 = app.count4 + 1;
 %     end

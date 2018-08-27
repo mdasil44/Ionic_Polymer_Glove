@@ -132,74 +132,74 @@ function plotData(obj, event, app)
                                     app.timeData(startTime:end), app.cap16FiltData(startTime:end));
                                        
                                 
-        tempCap = nan;
-        tempCap2 = nan;
-        switch app.TestSensorDropDown.Value
-            case 'I1'
-                tempCap = app.cap5FiltData; 
-                tempCap2 = app.cap5AdjData; 
-            case 'I3'
-                tempCap = app.cap6FiltData;
-                tempCap2 = app.cap6AdjData;
-            case 'M1'
-                tempCap = app.cap7FiltData;
-                tempCap2 = app.cap7AdjData;
-            case 'M3'
-                tempCap = app.cap8FiltData;
-                tempCap2 = app.cap8AdjData;
-            case 'R1'
-                tempCap = app.cap12FiltData;
-                tempCap2 = app.cap12AdjData;
-            case 'R3'
-                tempCap = app.cap11FiltData;
-                tempCap2 = app.cap11AdjData;
-            case 'S1'
-                tempCap = app.cap10FiltData;
-                tempCap2 = app.cap10AdjData;
-            case 'S3'
-                tempCap = app.cap9FiltData;
-                tempCap2 = app.cap9AdjData;
-            case 'T1'
-                tempCap = app.cap3FiltData;
-                tempCap2 = app.cap3AdjData;
-            case 'T2'
-                tempCap = app.cap4FiltData;
-                tempCap2 = app.cap4AdjData;
-            case 'P2'
-                tempCap = app.cap2FiltData;
-                tempCap2 = app.cap2AdjData;
-            case 'P3'
-                tempCap = app.cap14FiltData;
-                tempCap2 = app.cap14AdjData;
-            case 'P4'
-                tempCap = app.cap13FiltData;
-                tempCap2 = app.cap13AdjData;
-            case 'P5'
-                tempCap = app.cap15FiltData;
-                tempCap2 = app.cap15AdjData;
-        end
-        plot(app.CapAxes, app.timeData(startTime:end), tempCap(startTime:end), app.timeData(startTime:end), tempCap2(startTime:end));
-        app.CapAxes.XLim = [app.timeData(startTime) app.timeData(end)];
-        minData2 = min([-0.2 tempCap2(startTime:end)]);
-        if minData2 < 0
-            minData2 = minData2*1.1;
-        else
-            minData2 = minData2*0.9;
-        end
-        maxData2 = max(tempCap2(startTime:end));
-        if maxData2 < 0
-            maxData2 = maxData2*0.9;
-        else
-            maxData2 = maxData2*1.1;
-        end
-        app.CapAxes.YLim = [minData2 maxData2];
+%         tempCap = nan;
+%         tempCap2 = nan;
+%         switch app.TestSensorDropDown.Value
+%             case 'I1'
+%                 tempCap = app.cap5FiltData; 
+%                 tempCap2 = app.cap5AdjData; 
+%             case 'I3'
+%                 tempCap = app.cap6FiltData;
+%                 tempCap2 = app.cap6AdjData;
+%             case 'M1'
+%                 tempCap = app.cap7FiltData;
+%                 tempCap2 = app.cap7AdjData;
+%             case 'M3'
+%                 tempCap = app.cap8FiltData;
+%                 tempCap2 = app.cap8AdjData;
+%             case 'R1'
+%                 tempCap = app.cap12FiltData;
+%                 tempCap2 = app.cap12AdjData;
+%             case 'R3'
+%                 tempCap = app.cap11FiltData;
+%                 tempCap2 = app.cap11AdjData;
+%             case 'S1'
+%                 tempCap = app.cap10FiltData;
+%                 tempCap2 = app.cap10AdjData;
+%             case 'S3'
+%                 tempCap = app.cap9FiltData;
+%                 tempCap2 = app.cap9AdjData;
+%             case 'T1'
+%                 tempCap = app.cap3FiltData;
+%                 tempCap2 = app.cap3AdjData;
+%             case 'T2'
+%                 tempCap = app.cap4FiltData;
+%                 tempCap2 = app.cap4AdjData;
+%             case 'P2'
+%                 tempCap = app.cap2FiltData;
+%                 tempCap2 = app.cap2AdjData;
+%             case 'P3'
+%                 tempCap = app.cap14FiltData;
+%                 tempCap2 = app.cap14AdjData;
+%             case 'P4'
+%                 tempCap = app.cap13FiltData;
+%                 tempCap2 = app.cap13AdjData;
+%             case 'P5'
+%                 tempCap = app.cap15FiltData;
+%                 tempCap2 = app.cap15AdjData;
+%         end
+%         plot(app.CapAxes, app.timeData(startTime:end), tempCap(startTime:end), app.timeData(startTime:end), tempCap2(startTime:end));
+%         app.CapAxes.XLim = [app.timeData(startTime) app.timeData(end)];
+%         minData2 = min([-0.2 tempCap2(startTime:end)]);
+%         if minData2 < 0
+%             minData2 = minData2*1.1;
+%         else
+%             minData2 = minData2*0.9;
+%         end
+%         maxData2 = max(tempCap2(startTime:end));
+%         if maxData2 < 0
+%             maxData2 = maxData2*0.9;
+%         else
+%             maxData2 = maxData2*1.1;
+%         end
+%         app.CapAxes.YLim = [minData2 maxData2];
         
   
         order = 2;
-        sampling_freq = 18;
+        sampling_freq = 9;
         cut_off_freq = 1;
-        passband_peak_to_peak_db = 2;
-        stopband_attenuation = 40;
+        passband_peak_to_peak_db = 0.5;
+        stopband_attenuation = 20;
         [app.B,app.A] = ellip(order, passband_peak_to_peak_db, stopband_attenuation, cut_off_freq/(0.5*sampling_freq), 'low');
 
         app.CapacitanceAxes.XLim = [app.timeData(startTime) app.timeData(end)];

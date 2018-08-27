@@ -62,50 +62,40 @@ stopband_attenuation = 20;
 
 filt = filter(B,A,filtCap);
 
-cut_off_freq2 = 0.5;
-cut_off_freq3 = 4.49;
-[B,A] = ellip(order, passband_peak_to_peak_db, stopband_attenuation, [cut_off_freq2 cut_off_freq3]/(0.5*sampling_freq), 'stop');
+cut_off_freq2 = 3;
+[B,A] = ellip(order, passband_peak_to_peak_db, stopband_attenuation, cut_off_freq2/(0.5*sampling_freq),'high');
 
 filt2 = filter(B,A,filtCap);
-% filt2 = filt2*(min(filt)/min(filt2));
 
 figure('Name','Data','NumberTitle','off')
 plot(time,adjCap);
 hold on
 % plot(time, filtCap);
 plot(time, filt);
-plot(time, filt2);
-
-figure()
-N = length(adjCap);
-xdft = fft(adjCap);
-xdft = xdft(1:N/2+1);
-psdx = (1/(Fs*N)) * abs(xdft).^2;
-psdx(2:end-1) = 2*psdx(2:end-1);
-freq = 0:Fs/length(adjCap):Fs/2;
-
-N2 = length(filt);
-xdft2 = fft(filt);
-xdft2 = xdft2(1:N2/2+1);
-psdx2 = (1/(Fs*N2)) * abs(xdft2).^2;
-psdx2(2:end-1) = 2*psdx2(2:end-1);
-freq2 = 0:Fs/length(filt):Fs/2;
-
-N3 = length(filt2);
-xdft3 = fft(filt2);
-xdft3 = xdft3(1:N3/2+1);
-psdx3 = (1/(Fs*N3)) * abs(xdft3).^2;
-psdx3(2:end-1) = 2*psdx3(2:end-1);
-freq3 = 0:Fs/length(filt2):Fs/2;
+plot(time, filt2.*);
 
 % figure()
-plot(freq,10*log10(psdx))
-grid on
-title('Periodogram Using FFT')
-xlabel('Frequency (Hz)')
-ylabel('Power/Frequency (dB/Hz)')
-hold on
-plot(freq2,10*log10(psdx2))
-plot(freq3,10*log10(psdx3))
+% N = length(adjCap);
+% xdft = fft(adjCap);
+% xdft = xdft(1:N/2+1);
+% psdx = (1/(Fs*N)) * abs(xdft).^2;
+% psdx(2:end-1) = 2*psdx(2:end-1);
+% freq = 0:Fs/length(adjCap):Fs/2;
+% 
+% N2 = length(filtCap);
+% xdft2 = fft(filtCap);
+% xdft2 = xdft2(1:N2/2+1);
+% psdx2 = (1/(Fs*N2)) * abs(xdft2).^2;
+% psdx2(2:end-1) = 2*psdx2(2:end-1);
+% freq2 = 0:Fs/length(filtCap):Fs/2;
+% 
+% % figure()
+% plot(freq,10*log10(psdx))
+% grid on
+% title('Periodogram Using FFT')
+% xlabel('Frequency (Hz)')
+% ylabel('Power/Frequency (dB/Hz)')
+% hold on
+% plot(freq2,10*log10(psdx2))
 
 

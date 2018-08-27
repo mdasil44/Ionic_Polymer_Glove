@@ -63,7 +63,7 @@ int main(void)
         for ( count = 0; count < 16; count++)
         {
            sampleCapSensor(count);
-           //__delay_ms(5);
+           __delay_us(rand()%11);
         }
     }
 
